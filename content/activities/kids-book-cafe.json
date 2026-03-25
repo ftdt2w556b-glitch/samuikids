@@ -1,0 +1,21 @@
+{
+  "slug": "kids-book-cafe",
+  "title": "Kids Book Cafe & Reading Corner",
+  "shortDesc": "A cozy cafe with a huge kids' reading corner — books, smoothies, and a calm family atmosphere.",
+  "description": "The Kids Book Cafe is a hidden gem for families — a relaxed, air-conditioned cafe with an extensive collection of children's books in English and other languages. Kids can settle in with a book while parents enjoy great coffee. Regular story-time sessions are held on weekend mornings for toddlers and young readers. A perfect midday retreat from the heat with a genuinely calming atmosphere.",
+  "category": "food-cafes",
+  "tags": ["cafe", "books", "reading", "indoor", "toddler-friendly", "rainy day", "family-friendly"],
+  "ageGroups": ["toddlers", "kids", "tweens"],
+  "priceRange": "budget",
+  "priceNote": "Free reading with cafe purchase",
+  "location": {
+    "lat": 9.5310,
+    "lng": 100.0600,
+    "address": "Chaweng, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsreadingfriends.png", "/images/samuikidscafe2.png"],
+  "openingHours": "Daily 8am – 6pm. Story time: Sat & Sun 10am.",
+  "featured": false,
+  "popularity": 7
+}

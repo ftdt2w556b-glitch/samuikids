@@ -1,0 +1,21 @@
+{
+  "slug": "samui-temple-tour",
+  "title": "Big Buddha & Temple Explorer",
+  "shortDesc": "Visit Samui's iconic temples — including the famous Big Buddha — for a cultural family experience.",
+  "description": "Samui's temples are some of the most visually spectacular in Thailand and a brilliant introduction to Thai culture for children. The Big Buddha (Wat Phra Yai) is a must — a massive golden statue on a tiny island connected by a causeway. Other highlights include Wat Plai Laem with its colourful multi-armed goddess statue surrounded by fish-filled ponds. Kids love feeding the fish and exploring the ornate buildings.",
+  "category": "cultural",
+  "tags": ["temple", "Big Buddha", "cultural", "educational", "outdoor", "family-friendly", "free"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "free",
+  "priceNote": "Free entry (donations welcome). Modest dress required.",
+  "location": {
+    "lat": 9.5480,
+    "lng": 100.0610,
+    "address": "Bang Rak, Koh Samui",
+    "area": "Bang Rak"
+  },
+  "photos": ["/images/samuikidstemple.png", "/images/samuikidsmountaintemple.png"],
+  "openingHours": "Daily 8am – 5pm",
+  "featured": false,
+  "popularity": 8
+}

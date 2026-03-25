@@ -1,0 +1,21 @@
+{
+  "slug": "frisbee-golf-samui",
+  "title": "Frisbee Golf in the Park",
+  "shortDesc": "An easy, fun outdoor game the whole family can play — perfect for all ages and skill levels.",
+  "description": "Frisbee golf (disc golf) is one of those rare activities that genuinely works for every age, from toddlers to grandparents. Throw a frisbee at basket targets across a scenic outdoor course. No experience needed, easy to learn in minutes, and a brilliant way to enjoy Samui's beautiful outdoor spaces. Equipment hire available on site.",
+  "category": "adventure-sports",
+  "tags": ["frisbee golf", "disc golf", "outdoor", "family-friendly", "active", "park", "all ages"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "budget",
+  "priceNote": "From 150 THB including disc hire",
+  "location": {
+    "lat": 9.5350,
+    "lng": 100.0550,
+    "address": "Chaweng, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsfrisbeegolf.png"],
+  "openingHours": "Daily 8am – 6pm",
+  "featured": false,
+  "popularity": 7
+}

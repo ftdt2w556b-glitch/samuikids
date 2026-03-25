@@ -1,0 +1,21 @@
+{
+  "slug": "thai-street-food-tour",
+  "title": "Thai Street Food Tour for Families",
+  "shortDesc": "A guided tasting walk through Samui's best street food — adventurous eating made fun for kids.",
+  "description": "This guided street food tour is designed for adventurous families who want to eat like locals. A friendly guide takes you to the best roadside stalls and market vendors, explaining each dish and helping kids try things they'd never normally order. From fresh spring rolls and grilled satay to roti banana and coconut ice cream, this is the tastiest way to explore Thai culture. Suitable for all ages — guides know which dishes are mild enough for young palates.",
+  "category": "food-cafes",
+  "tags": ["street food", "Thai food", "food tour", "cultural", "guided", "family-friendly", "tasting"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "mid",
+  "priceNote": "From 700 THB per person (food included)",
+  "location": {
+    "lat": 9.5300,
+    "lng": 100.0590,
+    "address": "Chaweng, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsthaifood.png", "/images/samuikidsbananas.png"],
+  "openingHours": "Morning tours 8am, evening tours 5pm",
+  "featured": false,
+  "popularity": 8
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "learn-thai-language",
+  "title": "Kids Thai Language Class",
+  "shortDesc": "Fun, interactive Thai language lessons for kids — learn greetings, numbers, and fun phrases.",
+  "description": "These fun Thai language sessions are designed for children and families visiting Koh Samui. In just one hour, kids learn basic greetings, how to count, order food, and say polite phrases in Thai. The lessons use games, songs, and visual aids — not textbooks. Teachers are patient, friendly, and make it a memorable cultural experience. Great for curious kids who want to connect with locals.",
+  "category": "creative-learning",
+  "tags": ["Thai language", "educational", "cultural", "kids", "language", "family-friendly"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "budget",
+  "priceNote": "From 350 THB per child",
+  "location": {
+    "lat": 9.5440,
+    "lng": 100.0500,
+    "address": "Bophut, Koh Samui",
+    "area": "Bophut"
+  },
+  "photos": ["/images/samuikidslearnthai.png", "/images/samuikidsthailanguageclasses.png"],
+  "openingHours": "Classes Mon–Sat 9am and 2pm",
+  "featured": false,
+  "popularity": 7
+}

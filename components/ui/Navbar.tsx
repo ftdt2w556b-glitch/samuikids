@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, MapPin } from "lucide-react";
 
@@ -11,9 +12,15 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-cyan-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-black text-lg shadow">
-            S
+        <Link href="/" className="flex items-center gap-1 group">
+          <div className="relative w-14 h-14 flex-shrink-0">
+            <Image
+              src="/images/samuikidslogo.png"
+              alt="Samui Kids Fun Guide"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
           <div className="leading-none">
             <span className="block text-base font-black text-cyan-600">Samui Kids</span>
@@ -60,11 +67,7 @@ export default function Navbar() {
           <Link href="/" onClick={() => setOpen(false)} className="text-gray-700 py-2 border-b border-gray-100">
             Home
           </Link>
-          <Link
-            href="/activities"
-            onClick={() => setOpen(false)}
-            className="text-gray-700 py-2 border-b border-gray-100"
-          >
+          <Link href="/activities" onClick={() => setOpen(false)} className="text-gray-700 py-2 border-b border-gray-100">
             Activities
           </Link>
           <Link href="/map" onClick={() => setOpen(false)} className="text-gray-700 py-2 border-b border-gray-100">

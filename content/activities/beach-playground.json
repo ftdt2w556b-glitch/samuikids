@@ -1,0 +1,21 @@
+{
+  "slug": "beach-playground",
+  "title": "Beachside Playground & Park",
+  "shortDesc": "Shaded playground equipment right on the beach — slides, swings, and sand all in one spot.",
+  "description": "Samui has several beachside playgrounds that combine classic playground equipment with direct beach access. Kids can go from the swings to the sand to the sea and back again. Shaded areas make this comfortable even in the midday heat. Perfect for toddlers and young children who want to run, climb, and play freely while parents relax with a view of the ocean.",
+  "category": "water-beaches",
+  "tags": ["playground", "beach", "outdoor", "toddler-friendly", "free", "family-friendly"],
+  "ageGroups": ["toddlers", "kids"],
+  "priceRange": "free",
+  "priceNote": "Free entry",
+  "location": {
+    "lat": 9.5380,
+    "lng": 100.0600,
+    "address": "Chaweng Beach, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsbeachplayground.png", "/images/samuikidsbeachplay.png"],
+  "openingHours": "Open daily, daylight hours",
+  "featured": false,
+  "popularity": 7
+}

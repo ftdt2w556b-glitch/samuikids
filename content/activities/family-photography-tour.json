@@ -1,0 +1,21 @@
+{
+  "slug": "family-photography-tour",
+  "title": "Kids Photography Adventure",
+  "shortDesc": "Give kids a camera and let them discover Samui through their own lens — a creative guided tour.",
+  "description": "This unique guided photography tour puts a camera in your child's hands and lets them explore Koh Samui as junior photographers. Led by a friendly local guide, kids visit colourful temples, fishing villages, and jungle trails while learning basic photography tips — framing, light, and storytelling. At the end, the best shots are reviewed together. A creative, confidence-building activity that results in real keepsake photos.",
+  "category": "creative-learning",
+  "tags": ["photography", "creative", "guided tour", "cultural", "outdoor", "educational", "family-friendly"],
+  "ageGroups": ["kids", "tweens"],
+  "priceRange": "mid",
+  "priceNote": "From 600 THB per child (cameras provided)",
+  "location": {
+    "lat": 9.5450,
+    "lng": 100.0490,
+    "address": "Bophut Fisherman's Village, Koh Samui",
+    "area": "Bophut"
+  },
+  "photos": ["/images/samuikidscamera.png", "/images/samuikidsexplore.png"],
+  "openingHours": "Tours at 8am and 4pm daily",
+  "featured": false,
+  "popularity": 7
+}

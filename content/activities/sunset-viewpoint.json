@@ -1,0 +1,21 @@
+{
+  "slug": "sunset-viewpoint",
+  "title": "Samui Sunset Viewpoints",
+  "shortDesc": "Watch the sky turn gold and pink — the best sunset spots on Koh Samui for families.",
+  "description": "Koh Samui has some of the most spectacular sunsets in Thailand, and sharing that moment with your kids is something they'll talk about for years. The best family-friendly viewpoints include the hills above Chaweng, the Big Buddha causeway, and the quiet western coast. Bring snacks, arrive 30 minutes before sunset, and enjoy the show. Completely free and truly magical.",
+  "category": "nature-animals",
+  "tags": ["sunset", "viewpoint", "nature", "outdoor", "free", "family-friendly", "photography"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "free",
+  "priceNote": "Free",
+  "location": {
+    "lat": 9.5150,
+    "lng": 99.9700,
+    "address": "West Coast, Koh Samui",
+    "area": "West Coast"
+  },
+  "photos": ["/images/samuikidssunset.png", "/images/samuikidssunrise.png"],
+  "openingHours": "Best at 6pm–7pm",
+  "featured": false,
+  "popularity": 8
+}

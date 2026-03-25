@@ -1,0 +1,21 @@
+{
+  "slug": "kids-entertainment-centre",
+  "title": "Kids Entertainment Centre",
+  "shortDesc": "Indoor play zones, trampolines, soft play, and games — a full rainy-day adventure for young kids.",
+  "description": "Samui's dedicated kids entertainment centres are purpose-built for families with younger children. Expect soft play areas, ball pits, mini trampolines, ride-on toys, climbing frames, and parent seating areas with café service. Supervised sessions ensure kids play safely while parents relax. Perfect for toddlers and kids up to age 10, and an absolute lifesaver on rainy days.",
+  "category": "entertainment",
+  "tags": ["soft play", "indoor", "toddler-friendly", "rainy day", "trampolines", "family-friendly", "play centre"],
+  "ageGroups": ["toddlers", "kids"],
+  "priceRange": "budget",
+  "priceNote": "From 150 THB per child per session",
+  "location": {
+    "lat": 9.5300,
+    "lng": 100.0590,
+    "address": "Chaweng, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsentertainment2.png", "/images/samuikidsentertainment3.png"],
+  "openingHours": "Daily 9am – 7pm",
+  "featured": false,
+  "popularity": 8
+}

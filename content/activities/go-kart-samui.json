@@ -1,0 +1,21 @@
+{
+  "slug": "go-kart-samui",
+  "title": "Samui Go-Kart Racing",
+  "shortDesc": "Zoom around a fun outdoor track — junior karts for kids, full-size for adults.",
+  "description": "Samui Go-Kart is one of the island's most popular family activities. Junior karts are available for children from age 5, and the full-size track gets the adrenaline pumping for older kids and adults. Safety helmets and briefings are provided. Great for a competitive family afternoon — race each other and see who takes the chequered flag!",
+  "category": "adventure-sports",
+  "tags": ["go-kart", "racing", "outdoor", "family-friendly", "adrenaline", "kids"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "mid",
+  "priceNote": "From 200 THB per race",
+  "location": {
+    "lat": 9.5320,
+    "lng": 100.0580,
+    "address": "Chaweng Noi, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsgokart.png", "/images/samuikidscartracing.png"],
+  "openingHours": "Daily 10am – 8pm",
+  "featured": false,
+  "popularity": 8
+}

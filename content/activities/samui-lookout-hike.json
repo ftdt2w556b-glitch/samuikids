@@ -1,0 +1,21 @@
+{
+  "slug": "samui-lookout-hike",
+  "title": "Samui Hilltop Lookout Hike",
+  "shortDesc": "A short climb to breathtaking panoramic views over the entire island and turquoise sea.",
+  "description": "Several of Samui's hilltop lookout points offer stunning 360-degree views over the island, with turquoise ocean on all sides and jungle below. The short hikes to reach these viewpoints are suitable for kids aged 6 and up, taking just 20–40 minutes each way. Bring water, go early or late to avoid midday heat, and reward the family with the most spectacular view on the island. Totally free.",
+  "category": "nature-animals",
+  "tags": ["hiking", "viewpoint", "lookout", "nature", "outdoor", "free", "family-friendly"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "free",
+  "priceNote": "Free",
+  "location": {
+    "lat": 9.5250,
+    "lng": 100.0100,
+    "address": "Central Hills, Koh Samui",
+    "area": "Central Samui"
+  },
+  "photos": ["/images/samuikidslookouts.png", "/images/samuikidssunrise.png"],
+  "openingHours": "Open daily — best at sunrise or sunset",
+  "featured": false,
+  "popularity": 8
+}

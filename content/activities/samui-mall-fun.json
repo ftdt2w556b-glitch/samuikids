@@ -1,0 +1,21 @@
+{
+  "slug": "samui-mall-fun",
+  "title": "Central Festival Mall — Family Day",
+  "shortDesc": "Air-conditioned mall with kids' rides, food court, cinema, and shops — perfect for a hot afternoon.",
+  "description": "When the heat gets too much, Central Festival Samui is the perfect cool-down destination. The mall has a large food court with international and Thai options, a kids' play area with rides, a cinema, and plenty of shopping. It's a great half-day option that combines entertainment, food, and air-conditioning — parents and kids alike will find something to enjoy.",
+  "category": "entertainment",
+  "tags": ["mall", "shopping", "indoor", "air-conditioned", "rainy day", "family-friendly", "food court"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "budget",
+  "priceNote": "Free entry, costs vary by activity",
+  "location": {
+    "lat": 9.5295,
+    "lng": 100.0595,
+    "address": "Central Festival Samui, Chaweng",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsmall.png", "/images/samuikidsmall2.png"],
+  "openingHours": "Daily 10am – 10pm",
+  "featured": false,
+  "popularity": 7
+}
