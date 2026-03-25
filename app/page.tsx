@@ -38,20 +38,8 @@ export default function HomePage() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center gap-6 w-full">
-          {/* Text */}
-          <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-4">
-              <MapPin size={14} />
-              Koh Samui, Thailand
-            </div>
-
-            <RotatingHero totalCount={totalCount} />
-
-            <HeroSearch />
-          </div>
-
-          {/* Logo as hero graphic */}
-          <div className="flex-shrink-0 relative w-72 h-72 md:w-96 md:h-96 drop-shadow-2xl">
+          {/* Logo — first in DOM so on mobile it appears at top */}
+          <div className="flex-shrink-0 relative w-64 h-64 md:w-80 md:h-80 drop-shadow-2xl">
             <Image
               src="/images/samuikidslogo.png"
               alt="Samui Kids Fun Guide"
@@ -59,6 +47,18 @@ export default function HomePage() {
               className="object-contain"
               priority
             />
+          </div>
+
+          {/* Text */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-4">
+              <MapPin size={14} />
+              Koh Samui, Thailand
+            </div>
+
+            <RotatingHero />
+
+            <HeroSearch />
           </div>
         </div>
       </section>

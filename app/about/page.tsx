@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 
@@ -14,7 +15,9 @@ export default function AboutPage() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Hero */}
       <div className="text-center mb-12">
-        <div className="text-6xl mb-4">🌴</div>
+        <div className="relative w-40 h-40 mx-auto mb-4">
+          <Image src="/images/samuikidslogo.png" alt="Samui Kids" fill className="object-contain" />
+        </div>
         <h1 className="text-4xl font-black text-gray-900 mb-4">About SamuiKids.com</h1>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto font-semibold">
           Kid-centric adventures on Koh Samui — where kids lead, and parents find their freedom.
@@ -100,9 +103,12 @@ export default function AboutPage() {
       <div className="text-center mt-12">
         <Link
           href="/activities"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg text-lg"
+          className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg text-lg"
         >
-          🌴 Start Exploring
+          <span className="relative w-8 h-8 flex-shrink-0">
+            <Image src="/images/samuikidssquirel.png" alt="" fill className="object-contain" />
+          </span>
+          Start Exploring
         </Link>
       </div>
     </div>

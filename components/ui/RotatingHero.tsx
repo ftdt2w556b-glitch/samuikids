@@ -13,7 +13,7 @@ const subheadlines = [
   "Your kids get the spotlight, so you can enjoy guilt-free downtime. Parents can recharge with peace of mind.",
 ];
 
-export default function RotatingHero({ totalCount }: { totalCount: number }) {
+export default function RotatingHero() {
   const [headlineIdx, setHeadlineIdx] = useState(0);
   const [subIdx, setSubIdx] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -25,28 +25,30 @@ export default function RotatingHero({ totalCount }: { totalCount: number }) {
         setHeadlineIdx((i) => (i + 1) % headlines.length);
         setSubIdx((i) => (i + 1) % subheadlines.length);
         setVisible(true);
-      }, 500);
-    }, 5000);
+      }, 800);
+    }, 9000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div>
-      <h1
-        className="text-4xl md:text-5xl font-black text-white leading-tight drop-shadow-sm mb-4 transition-opacity duration-500"
-        style={{ opacity: visible ? 1 : 0 }}
-      >
-        {headlines[headlineIdx]}
-      </h1>
-      <p
-        className="text-white/90 text-lg mb-6 max-w-md font-semibold transition-opacity duration-500"
-        style={{ opacity: visible ? 1 : 0 }}
-      >
-        {subheadlines[subIdx]}
-      </p>
-      <p className="text-white/70 text-sm mb-4 font-medium">
-        {totalCount}+ kid-centric activities on Koh Samui 🌴
-      </p>
+      {/* Fixed-height containers prevent layout jump during text swap */}
+      <div className="min-h-[144px] md:min-h-[160px] mb-4">
+        <h1
+          className="text-4xl md:text-5xl font-black text-white leading-tight drop-shadow-sm transition-opacity duration-700"
+          style={{ opacity: visible ? 1 : 0 }}
+        >
+          {headlines[headlineIdx]}
+        </h1>
+      </div>
+      <div className="min-h-[80px] mb-6">
+        <p
+          className="text-white/90 text-lg max-w-md font-semibold transition-opacity duration-700"
+          style={{ opacity: visible ? 1 : 0 }}
+        >
+          {subheadlines[subIdx]}
+        </p>
+      </div>
     </div>
   );
 }
