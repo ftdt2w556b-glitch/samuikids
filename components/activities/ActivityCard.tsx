@@ -21,7 +21,7 @@ export default function ActivityCard({ activity }: Props) {
               src={activity.photos[0]}
               alt={activity.title}
               fill
-              className="object-cover activity-card-img"
+              className="object-contain activity-card-img p-2"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (

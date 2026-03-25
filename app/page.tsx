@@ -5,6 +5,7 @@ import { getFeaturedActivities, getAllActivities } from "@/lib/activities";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import ActivityCard from "@/components/activities/ActivityCard";
 import HeroSearch from "@/components/ui/HeroSearch";
+import RotatingHero from "@/components/ui/RotatingHero";
 import { Category } from "@/types";
 
 export default function HomePage() {
@@ -37,46 +38,25 @@ export default function HomePage() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center gap-6 w-full">
-          {/* Text + Logo */}
+          {/* Text */}
           <div className="flex-1 text-center md:text-left">
-
-            {/* Big logo on homepage */}
-            <div className="relative w-48 h-48 mx-auto md:mx-0 mb-2 drop-shadow-xl">
-              <Image
-                src="/images/samuikidslogo.png"
-                alt="Samui Kids Fun Guide"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-
-            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-3">
+            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-4">
               <MapPin size={14} />
               Koh Samui, Thailand
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white leading-tight drop-shadow-sm mb-4">
-              Discover Family
-              <br />
-              <span className="text-yellow-300">Adventures</span> on
-              <br />
-              Koh Samui 🌴
-            </h1>
-            <p className="text-white/90 text-lg mb-6 max-w-md font-semibold">
-              {totalCount}+ kid-friendly activities — from elephant sanctuaries and water parks to jungle hikes and cooking classes.
-            </p>
+
+            <RotatingHero totalCount={totalCount} />
 
             <HeroSearch />
           </div>
 
-          {/* Hero illustration — no white box */}
-          <div className="flex-shrink-0 relative w-72 h-52 md:w-80 md:h-60">
+          {/* Logo as hero graphic */}
+          <div className="flex-shrink-0 relative w-72 h-72 md:w-96 md:h-96 drop-shadow-2xl">
             <Image
-              src="/images/familyandmonkey.png"
-              alt="Family on Koh Samui beach"
+              src="/images/samuikidslogo.png"
+              alt="Samui Kids Fun Guide"
               fill
-              className="object-contain drop-shadow-2xl"
-              style={{ mixBlendMode: "multiply" }}
+              className="object-contain"
               priority
             />
           </div>

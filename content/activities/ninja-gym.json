@@ -1,10 +1,10 @@
 {
   "slug": "ninja-gym",
-  "title": "Ninja Gym Koh Samui",
-  "shortDesc": "Obstacle courses, ninja training, and martial arts for kids — the ultimate active adventure.",
-  "description": "Ninja Gym is Koh Samui's premier action sports facility offering obstacle courses, martial arts, and ninja warrior-style training for kids and families. With padded floors, foam pits, balance beams, and wall runs, kids can channel their inner ninja while building strength, coordination, and confidence. Suitable for ages 4 and up.",
+  "title": "Rick Tew's NinjaGym",
+  "shortDesc": "Obstacle courses, ninja training, and martial arts for kids — the ultimate active adventure with drop-off available.",
+  "description": "Rick Tew's NinjaGym is Koh Samui's premier action sports facility offering obstacle courses, martial arts, and ninja warrior-style training for kids and families. With padded floors, foam pits, balance beams, and wall runs, kids can channel their inner ninja while building strength, coordination, and confidence. Supervised sessions make it a perfect drop-off activity for parents who want a well-deserved break. Suitable for ages 4 and up.",
   "category": "adventure-sports",
-  "tags": ["ninja", "obstacle course", "martial arts", "active", "indoor", "family-friendly"],
+  "tags": ["ninja", "obstacle course", "martial arts", "active", "indoor", "family-friendly", "drop-off"],
   "ageGroups": ["kids", "tweens", "all-ages"],
   "priceRange": "mid",
   "priceNote": "From 300 THB per session",
@@ -18,5 +18,5 @@
   "openingHours": "Daily 9am – 8pm",
   "website": "https://ninjagym.com",
   "featured": true,
-  "popularity": 9
+  "popularity": 10
 }
