@@ -1,0 +1,22 @@
+{
+  "slug": "ninja-gym",
+  "title": "Ninja Gym Koh Samui",
+  "shortDesc": "Obstacle courses, ninja training, and martial arts for kids — the ultimate active adventure.",
+  "description": "Ninja Gym is Koh Samui's premier action sports facility offering obstacle courses, martial arts, and ninja warrior-style training for kids and families. With padded floors, foam pits, balance beams, and wall runs, kids can channel their inner ninja while building strength, coordination, and confidence. Suitable for ages 4 and up.",
+  "category": "adventure-sports",
+  "tags": ["ninja", "obstacle course", "martial arts", "active", "indoor", "family-friendly"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "mid",
+  "priceNote": "From 300 THB per session",
+  "location": {
+    "lat": 9.5316,
+    "lng": 100.0622,
+    "address": "Chaweng Beach Road, Koh Samui",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/activities/ninja-gym-1.jpg", "/images/activities/ninja-gym-2.jpg"],
+  "openingHours": "Daily 9am – 8pm",
+  "website": "https://ninjagym.com",
+  "featured": true,
+  "popularity": 9
+}

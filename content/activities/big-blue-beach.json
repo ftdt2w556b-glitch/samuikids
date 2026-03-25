@@ -1,0 +1,21 @@
+{
+  "slug": "big-blue-beach",
+  "title": "Big Blue Beach Club — Family Zone",
+  "shortDesc": "Calm, shallow waters with a dedicated family section, kids pool, and beachside food.",
+  "description": "Big Blue Beach Club has a dedicated family zone with calm, shallow water perfect for young swimmers, a kids' paddling pool, beach volleyball, and excellent beachside food and drinks. Sun loungers are available for parents while kids splash freely. One of the safest and most family-friendly beaches on the island.",
+  "category": "water-beaches",
+  "tags": ["beach", "swimming", "family-friendly", "outdoor", "snorkeling", "kids pool"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "budget",
+  "priceNote": "Free entry, food and drinks available",
+  "location": {
+    "lat": 9.5200,
+    "lng": 100.0650,
+    "address": "Lamai Beach, Koh Samui",
+    "area": "Lamai"
+  },
+  "photos": ["/images/activities/placeholder.jpg"],
+  "openingHours": "Daily 8am – 9pm",
+  "featured": false,
+  "popularity": 8
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "namuang-waterfall",
+  "title": "Namuang Waterfall Easy Hike",
+  "shortDesc": "A short jungle hike to Samui's most beautiful waterfall — a natural swimming hole kids love.",
+  "description": "The Namuang Waterfall hike is one of the easiest and most rewarding short treks on Koh Samui. The trail is mostly flat with a gentle incline, taking about 20 minutes through lush jungle to reach a stunning 20-metre waterfall with a natural swimming pool at its base. Kids love splashing in the cool water. The lower falls are accessible with a stroller.",
+  "category": "nature-animals",
+  "tags": ["waterfall", "hiking", "nature", "swimming", "outdoor", "family-friendly", "free"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "free",
+  "priceNote": "Free entry",
+  "location": {
+    "lat": 9.5100,
+    "lng": 99.9900,
+    "address": "Namuang, Koh Samui",
+    "area": "Namuang"
+  },
+  "photos": ["/images/activities/placeholder.jpg"],
+  "openingHours": "Open daily, daylight hours",
+  "featured": false,
+  "popularity": 8
+}

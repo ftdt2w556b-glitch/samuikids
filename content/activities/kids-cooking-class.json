@@ -1,0 +1,21 @@
+{
+  "slug": "kids-cooking-class",
+  "title": "Kids Thai Cooking Class",
+  "shortDesc": "Little chefs learn to make Pad Thai and mango sticky rice in this hands-on family cooking class.",
+  "description": "This fun, hands-on Thai cooking class is designed specifically for kids and families. Children as young as 5 can join, guided by a friendly chef to cook authentic Thai dishes like Pad Thai, spring rolls, and mango sticky rice. Classes are held in an open-air kitchen and include a visit to the morning market to pick fresh ingredients. You eat what you cook!",
+  "category": "creative-learning",
+  "tags": ["cooking", "Thai food", "cultural", "hands-on", "family-friendly", "educational"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "mid",
+  "priceNote": "From 800 THB per person, children 400 THB",
+  "location": {
+    "lat": 9.5450,
+    "lng": 100.0480,
+    "address": "Bophut Fisherman's Village, Koh Samui",
+    "area": "Bophut"
+  },
+  "photos": ["/images/activities/placeholder.jpg"],
+  "openingHours": "Classes at 10am and 3pm daily",
+  "featured": true,
+  "popularity": 9
+}

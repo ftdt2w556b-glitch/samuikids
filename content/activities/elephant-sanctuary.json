@@ -1,0 +1,21 @@
+{
+  "slug": "elephant-sanctuary",
+  "title": "Samui Elephant Sanctuary",
+  "shortDesc": "Ethical elephant encounters — feed, bathe, and walk alongside rescued elephants.",
+  "description": "Samui Elephant Sanctuary offers an ethical, no-riding experience where families can get up close with rescued elephants. Kids can hand-feed the elephants fruit, walk with them through the forest, and help with bathing time. Guides explain elephant conservation and Thai culture throughout. A truly memorable, educational experience for the whole family.",
+  "category": "nature-animals",
+  "tags": ["elephants", "animals", "nature", "ethical", "educational", "family-friendly", "outdoor"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "premium",
+  "priceNote": "From 1,800 THB adults / 1,200 THB children",
+  "location": {
+    "lat": 9.5600,
+    "lng": 99.9800,
+    "address": "Namuang, Koh Samui",
+    "area": "Namuang"
+  },
+  "photos": ["/images/activities/placeholder.jpg"],
+  "openingHours": "Tours at 8am, 11am, 2pm daily",
+  "featured": true,
+  "popularity": 10
+}

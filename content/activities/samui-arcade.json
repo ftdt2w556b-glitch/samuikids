@@ -1,0 +1,21 @@
+{
+  "slug": "samui-arcade",
+  "title": "Fun Zone Arcade",
+  "shortDesc": "Classic and modern arcade games, air hockey, claw machines, and token redemption prizes.",
+  "description": "Fun Zone Arcade is a huge indoor air-conditioned arcade packed with classic and modern games — racing simulators, air hockey, basketball shootout, claw machines, and hundreds of token-operated prize redemption games. Great for an evening or rainy afternoon with kids of all ages. Token bundles offer great value.",
+  "category": "entertainment",
+  "tags": ["arcade", "games", "indoor", "rainy day", "family-friendly", "evening activity"],
+  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "priceRange": "budget",
+  "priceNote": "Token bundles from 100 THB",
+  "location": {
+    "lat": 9.5290,
+    "lng": 100.0590,
+    "address": "Central Festival Samui, Chaweng",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/activities/placeholder.jpg"],
+  "openingHours": "Daily 11am – 10pm",
+  "featured": false,
+  "popularity": 7
+}

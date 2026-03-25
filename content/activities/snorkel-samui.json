@@ -1,0 +1,21 @@
+{
+  "slug": "snorkel-samui",
+  "title": "Snorkel Samui — Beginner Trips",
+  "shortDesc": "Calm, guided snorkeling tours perfect for first-timers and young kids from age 5.",
+  "description": "Snorkel Samui runs small-group snorkeling tours designed specifically for beginners and families with young children. Trips head to shallow, calm reefs around Koh Tan and Koh Mudsum where visibility is excellent and marine life is abundant. Guides are patient, safety-first, and provide all equipment including child-sized masks and vests.",
+  "category": "water-beaches",
+  "tags": ["snorkeling", "boat trip", "marine life", "beginner", "family-friendly", "ocean"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "mid",
+  "priceNote": "From 900 THB per person including equipment",
+  "location": {
+    "lat": 9.4800,
+    "lng": 100.0300,
+    "address": "Nathon Pier, Koh Samui",
+    "area": "Nathon"
+  },
+  "photos": ["/images/activities/placeholder.jpg"],
+  "openingHours": "Tours depart 9am and 1pm daily",
+  "featured": true,
+  "popularity": 8
+}
