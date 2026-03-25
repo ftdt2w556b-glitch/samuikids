@@ -31,19 +31,19 @@ export default function RotatingHero() {
   }, []);
 
   return (
-    <div>
-      {/* Fixed-height containers prevent layout jump during text swap */}
-      <div className="min-h-[144px] md:min-h-[160px] mb-4">
+    <div className="mb-5">
+      {/* Fixed-height containers stop layout jump — sized to fit longest text */}
+      <div className="h-[108px] sm:h-[88px] md:h-[100px] overflow-hidden mb-3">
         <h1
-          className="text-4xl md:text-5xl font-black text-white leading-tight drop-shadow-sm transition-opacity duration-700"
+          className="text-3xl sm:text-3xl md:text-4xl font-black text-white leading-snug drop-shadow-sm transition-opacity duration-700"
           style={{ opacity: visible ? 1 : 0 }}
         >
           {headlines[headlineIdx]}
         </h1>
       </div>
-      <div className="min-h-[80px] mb-6">
+      <div className="h-[72px] sm:h-[56px] overflow-hidden">
         <p
-          className="text-white/90 text-lg max-w-md font-semibold transition-opacity duration-700"
+          className="text-white/90 text-base md:text-lg font-semibold transition-opacity duration-700 leading-snug"
           style={{ opacity: visible ? 1 : 0 }}
         >
           {subheadlines[subIdx]}

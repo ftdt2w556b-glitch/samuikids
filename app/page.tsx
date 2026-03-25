@@ -27,21 +27,20 @@ export default function HomePage() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative bg-gradient-to-b from-sky-400 via-cyan-400 to-cyan-300 overflow-hidden min-h-[460px] flex items-center">
+      <section className="relative bg-gradient-to-b from-sky-400 via-cyan-400 to-cyan-300 overflow-hidden flex items-center">
         {/* Decorative blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-yellow-300/30 blur-2xl" />
           <div className="absolute top-20 -right-10 w-52 h-52 rounded-full bg-blue-300/40 blur-2xl" />
-          {/* Wave bottom */}
           <div
             className="absolute bottom-0 left-0 right-0 h-16 bg-white"
             style={{ clipPath: "ellipse(55% 100% at 50% 100%)" }}
           />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center gap-6 w-full">
-          {/* Logo — first in DOM so on mobile it appears at top */}
-          <div className="flex-shrink-0 relative w-64 h-64 md:w-80 md:h-80 drop-shadow-2xl">
+        <div className="relative max-w-6xl mx-auto px-6 py-10 pb-16 w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          {/* Logo — first in DOM so mobile shows it at top, centred */}
+          <div className="flex-shrink-0 relative w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72 drop-shadow-2xl mx-auto md:mx-0">
             <Image
               src="/images/samuikidslogo.png"
               alt="Samui Kids Fun Guide"
@@ -51,15 +50,13 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Text */}
-          <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-4">
+          {/* Text — centred on mobile, left-aligned on desktop */}
+          <div className="flex-1 text-center md:text-left min-w-0">
+            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-3">
               <MapPin size={14} />
               Koh Samui, Thailand
             </div>
-
             <RotatingHero />
-
             <HeroSearch />
           </div>
         </div>
