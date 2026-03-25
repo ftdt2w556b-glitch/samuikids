@@ -4,18 +4,35 @@
   "shortDesc": "Sip coffee and play with friendly cats in Samui's most adorable cafe.",
   "description": "Cat Cafe Samui is a haven for animal lovers — a cozy, air-conditioned cafe where resident cats roam freely, curl up in your lap, and play with guests. Kids absolutely love it. Enjoy Thai coffee, smoothies, and snacks while the cats provide endless entertainment. The cats are well-cared-for, vaccinated, and very friendly.",
   "category": "food-cafes",
-  "tags": ["cat cafe", "animals", "cafe", "indoor", "family-friendly", "rainy day", "toddler-friendly"],
-  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "tags": [
+    "cat cafe",
+    "animals",
+    "cafe",
+    "indoor",
+    "family-friendly",
+    "rainy day",
+    "toddler-friendly"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "budget",
   "priceNote": "From 100 THB entry (includes drink)",
   "location": {
-    "lat": 9.5300,
-    "lng": 100.0620,
+    "lat": 9.53,
+    "lng": 100.062,
     "address": "Chaweng Beach Road, Koh Samui",
     "area": "Chaweng"
   },
-  "photos": ["/images/samuikidscatcafe.png", "/images/samuikidscatcafe2.png"],
+  "photos": [
+    "/images/samuikidscatcafe.png",
+    "/images/samuikidscatcafe2.png"
+  ],
   "openingHours": "Daily 10am – 8pm",
   "featured": true,
-  "popularity": 9
+  "popularity": 9,
+  "audience": "kids"
 }

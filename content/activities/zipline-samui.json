@@ -4,18 +4,33 @@
   "shortDesc": "Fly through the jungle canopy on thrilling ziplines — safe, guided, and unforgettable.",
   "description": "Samui's jungle zipline tours take families soaring above the treetops on a series of platforms and ziplines through lush tropical forest. Suitable for children from age 7, guides are fully trained and safety equipment is top quality. A combination of ziplines, rope bridges, and abseiling makes this a full adventure park experience in the heart of the jungle.",
   "category": "adventure-sports",
-  "tags": ["zipline", "jungle", "outdoor", "adventure", "family-friendly", "nature"],
-  "ageGroups": ["kids", "tweens", "all-ages"],
+  "tags": [
+    "zipline",
+    "jungle",
+    "outdoor",
+    "adventure",
+    "family-friendly",
+    "nature"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "mid",
   "priceNote": "From 800 THB per person",
   "location": {
-    "lat": 9.5500,
-    "lng": 100.0000,
+    "lat": 9.55,
+    "lng": 100,
     "address": "Namuang Jungle, Koh Samui",
     "area": "Namuang"
   },
-  "photos": ["/images/samuikidszipline.png", "/images/samuikidszipline2.png"],
+  "photos": [
+    "/images/samuikidszipline.png",
+    "/images/samuikidszipline2.png"
+  ],
   "openingHours": "Daily 9am – 5pm",
   "featured": true,
-  "popularity": 9
+  "popularity": 9,
+  "audience": "family"
 }

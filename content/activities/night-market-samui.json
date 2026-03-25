@@ -4,18 +4,35 @@
   "shortDesc": "The best family evening out — street food, crafts, live music, and a buzzing local atmosphere.",
   "description": "Samui's walking street night markets are one of the best family evenings on the island. Stalls stretch for hundreds of metres selling fresh grilled seafood, pad thai, mango sticky rice, handmade crafts, clothing, and souvenirs. Kids love the food, the atmosphere, and browsing the stalls. The Bophut Fisherman's Village walking street on Friday nights is particularly famous and family-friendly.",
   "category": "cultural",
-  "tags": ["night market", "street food", "shopping", "cultural", "evening", "family-friendly", "outdoor"],
-  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "tags": [
+    "night market",
+    "street food",
+    "shopping",
+    "cultural",
+    "evening",
+    "family-friendly",
+    "outdoor"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "budget",
   "priceNote": "Free to browse — budget 200–500 THB for food",
   "location": {
-    "lat": 9.5460,
-    "lng": 100.0460,
+    "lat": 9.546,
+    "lng": 100.046,
     "address": "Bophut Fisherman's Village, Koh Samui",
     "area": "Bophut"
   },
-  "photos": ["/images/samuikidsshopping.png", "/images/samuikidsdaymarket.png"],
+  "photos": [
+    "/images/samuikidsshopping.png",
+    "/images/samuikidsdaymarket.png"
+  ],
   "openingHours": "Friday Walking Street: 5pm – 11pm. Other markets vary.",
   "featured": true,
-  "popularity": 9
+  "popularity": 9,
+  "audience": "family"
 }

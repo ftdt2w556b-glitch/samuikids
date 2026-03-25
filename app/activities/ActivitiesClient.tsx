@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
-import { Activity, Category, AgeGroup, PriceRange } from "@/types";
+import { Activity, Category, AgeGroup, PriceRange, Audience } from "@/types";
 import {
   filterActivities,
   CATEGORY_LABELS,
@@ -19,6 +19,7 @@ interface Props {
   initialAge?: AgeGroup;
   initialSearch?: string;
   initialPrice?: PriceRange;
+  initialAudience?: Audience;
 }
 
 export default function ActivitiesClient({
@@ -27,6 +28,7 @@ export default function ActivitiesClient({
   initialAge,
   initialSearch = "",
   initialPrice,
+  initialAudience,
 }: Props) {
   const [search, setSearch] = useState(initialSearch);
   const [selectedCategories, setSelectedCategories] = useState<Category[]>(
@@ -38,6 +40,7 @@ export default function ActivitiesClient({
   const [selectedPrices, setSelectedPrices] = useState<PriceRange[]>(
     initialPrice ? [initialPrice] : []
   );
+  const [audience, setAudience] = useState<Audience | "all">(initialAudience ?? "all");
   const [sortBy, setSortBy] = useState<"popularity" | "price-low" | "price-high">("popularity");
   const [showFilters, setShowFilters] = useState(
     !!(initialCategory || initialAge || initialPrice)
@@ -52,6 +55,10 @@ export default function ActivitiesClient({
       priceRanges: selectedPrices,
       search,
     });
+
+    if (audience !== "all") {
+      result = result.filter((a) => a.audience === audience);
+    }
 
     if (sortBy === "price-low") {
       result = [...result].sort(
@@ -112,6 +119,27 @@ export default function ActivitiesClient({
         <p className="text-gray-500">
           {filtered.length} of {activities.length} activities on Koh Samui
         </p>
+      </div>
+
+      {/* Audience tabs */}
+      <div className="flex gap-2 mb-6">
+        {([
+          { value: "all",    label: "All Activities",      emoji: "🌟" },
+          { value: "kids",   label: "Just for Kids",       emoji: "🧒" },
+          { value: "family", label: "Family Adventures",   emoji: "👨‍👩‍👧‍👦" },
+        ] as { value: Audience | "all"; label: string; emoji: string }[]).map(({ value, label, emoji }) => (
+          <button
+            key={value}
+            onClick={() => setAudience(value)}
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-bold text-sm transition-all border ${
+              audience === value
+                ? "bg-cyan-500 text-white border-cyan-500 shadow-sm"
+                : "bg-white text-gray-600 border-gray-200 hover:border-cyan-300"
+            }`}
+          >
+            {emoji} {label}
+          </button>
+        ))}
       </div>
 
       {/* Search + controls */}

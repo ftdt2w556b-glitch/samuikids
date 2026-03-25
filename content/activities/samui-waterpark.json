@@ -4,18 +4,34 @@
   "shortDesc": "Thrilling slides, lazy rivers, and splash zones — a full day of water fun for the whole family.",
   "description": "Samui Water Park is the island's top water attraction, featuring high-speed slides, a lazy river, wave pool, and dedicated toddler splash zones. The park has shaded seating, locker rooms, food stalls, and lifeguards on duty. A full-day activity that kids absolutely love.",
   "category": "water-beaches",
-  "tags": ["water park", "slides", "swimming", "outdoor", "family-friendly", "beach"],
-  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "tags": [
+    "water park",
+    "slides",
+    "swimming",
+    "outdoor",
+    "family-friendly",
+    "beach"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "mid",
   "priceNote": "From 450 THB adults / 350 THB children",
   "location": {
-    "lat": 9.5400,
-    "lng": 100.0500,
+    "lat": 9.54,
+    "lng": 100.05,
     "address": "Bang Rak, Koh Samui",
     "area": "Bang Rak"
   },
-  "photos": ["/images/samuikidswaterpark.png", "/images/samuikidsbeachplay.png"],
+  "photos": [
+    "/images/samuikidswaterpark.png",
+    "/images/samuikidsbeachplay.png"
+  ],
   "openingHours": "Daily 10am – 6pm",
   "featured": true,
-  "popularity": 9
+  "popularity": 9,
+  "audience": "kids"
 }

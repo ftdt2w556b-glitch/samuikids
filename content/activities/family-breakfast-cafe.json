@@ -4,18 +4,35 @@
   "shortDesc": "Start the day right — Samui's best kid-friendly breakfast spots with Thai and Western options.",
   "description": "Finding a genuinely family-friendly breakfast cafe in Samui is easier than you think. Several great spots around Chaweng, Lamai, and Bophut cater brilliantly to families — with high chairs, kid-friendly menus, fresh fruit platters, pancakes, smoothie bowls, and classic Thai breakfast dishes. A relaxed morning meal sets the tone for a great day of adventures.",
   "category": "food-cafes",
-  "tags": ["breakfast", "cafe", "family-friendly", "Thai food", "Western food", "morning", "toddler-friendly"],
-  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "tags": [
+    "breakfast",
+    "cafe",
+    "family-friendly",
+    "Thai food",
+    "Western food",
+    "morning",
+    "toddler-friendly"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "budget",
   "priceNote": "From 80–250 THB per person",
   "location": {
-    "lat": 9.5310,
+    "lat": 9.531,
     "lng": 100.0615,
     "address": "Chaweng & Bophut, Koh Samui",
     "area": "Chaweng"
   },
-  "photos": ["/images/samuikidscafe3.png", "/images/samuikidsfamily2.png"],
+  "photos": [
+    "/images/samuikidscafe3.png",
+    "/images/samuikidsfamily2.png"
+  ],
   "openingHours": "Most open daily 7am – 12pm",
   "featured": false,
-  "popularity": 7
+  "popularity": 7,
+  "audience": "family"
 }

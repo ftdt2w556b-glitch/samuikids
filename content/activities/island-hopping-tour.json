@@ -4,18 +4,34 @@
   "shortDesc": "Hop between Samui's nearby islands — crystal water, empty beaches, and snorkeling stops.",
   "description": "One of the ultimate Koh Samui experiences — a full-day or half-day boat trip hopping between the stunning nearby islands of Koh Tan, Koh Mudsum, and Koh Mat Sum. Family-friendly tours include shallow snorkeling stops, beach breaks on deserted white sand beaches, and fresh seafood lunch. Guides ensure kids are safe and engaged throughout. A day that will be the highlight of any family holiday.",
   "category": "water-beaches",
-  "tags": ["island hopping", "boat trip", "snorkeling", "beach", "outdoor", "family-friendly", "ocean"],
-  "ageGroups": ["kids", "tweens", "all-ages"],
+  "tags": [
+    "island hopping",
+    "boat trip",
+    "snorkeling",
+    "beach",
+    "outdoor",
+    "family-friendly",
+    "ocean"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "mid",
   "priceNote": "From 1,200 THB per person (lunch included)",
   "location": {
-    "lat": 9.4850,
-    "lng": 100.0250,
+    "lat": 9.485,
+    "lng": 100.025,
     "address": "Nathon Pier, Koh Samui",
     "area": "Nathon"
   },
-  "photos": ["/images/samuikidstravel.png", "/images/samuikidsmap.png"],
+  "photos": [
+    "/images/samuikidstravel.png",
+    "/images/samuikidsmap.png"
+  ],
   "openingHours": "Full day 8am – 5pm / Half day 8am – 1pm",
   "featured": true,
-  "popularity": 9
+  "popularity": 9,
+  "audience": "family"
 }

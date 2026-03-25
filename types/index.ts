@@ -1,5 +1,6 @@
 export type AgeGroup = "toddlers" | "kids" | "tweens" | "all-ages";
 export type PriceRange = "free" | "budget" | "mid" | "premium";
+export type Audience = "kids" | "family";
 export type Category =
   | "nature-animals"
   | "water-beaches"
@@ -31,4 +32,5 @@ export interface Activity {
   phone?: string;
   featured: boolean;
   popularity: number; // 1-10
+  audience: Audience;
 }

@@ -4,18 +4,34 @@
   "shortDesc": "Easy jungle trails through Samui's interior — spot tropical birds, butterflies, and wildlife.",
   "description": "Koh Samui's jungle interior is full of life — tropical birds, butterflies, lizards, squirrels, and if you're lucky, monkeys. These easy guided nature walks take families through shaded jungle paths at a relaxed pace. Guides point out medicinal plants, exotic insects, and local wildlife. A brilliant way to show kids the natural side of Thailand beyond the beach.",
   "category": "nature-animals",
-  "tags": ["nature", "wildlife", "jungle", "hiking", "outdoor", "family-friendly", "educational"],
-  "ageGroups": ["kids", "tweens", "all-ages"],
+  "tags": [
+    "nature",
+    "wildlife",
+    "jungle",
+    "hiking",
+    "outdoor",
+    "family-friendly",
+    "educational"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "budget",
   "priceNote": "From 300 THB per person",
   "location": {
-    "lat": 9.5200,
-    "lng": 99.9950,
+    "lat": 9.52,
+    "lng": 99.995,
     "address": "Namuang Interior, Koh Samui",
     "area": "Namuang"
   },
-  "photos": ["/images/samuikidsnature.png", "/images/samuikidssquirel.png"],
+  "photos": [
+    "/images/samuikidsnature.png",
+    "/images/samuikidssquirel.png"
+  ],
   "openingHours": "Daily 8am – 4pm",
   "featured": false,
-  "popularity": 7
+  "popularity": 7,
+  "audience": "family"
 }

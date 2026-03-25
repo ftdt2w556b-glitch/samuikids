@@ -4,18 +4,31 @@
   "shortDesc": "Family table tennis fun with multiple tables, friendly tournaments, and kids coaching.",
   "description": "Ping Pong Palace is a fun, air-conditioned sports centre packed with table tennis tables for all skill levels. Perfect for rainy days or cooling off from the heat. Kids can take beginner coaching sessions, and the whole family can play casual games. Tournaments run on weekends — great for a little friendly competition!",
   "category": "adventure-sports",
-  "tags": ["ping pong", "table tennis", "indoor", "family-friendly", "rainy day"],
-  "ageGroups": ["kids", "tweens", "all-ages"],
+  "tags": [
+    "ping pong",
+    "table tennis",
+    "indoor",
+    "family-friendly",
+    "rainy day"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "budget",
   "priceNote": "From 100 THB per hour",
   "location": {
-    "lat": 9.5280,
-    "lng": 100.0600,
+    "lat": 9.528,
+    "lng": 100.06,
     "address": "Chaweng Lake Road, Koh Samui",
     "area": "Chaweng"
   },
-  "photos": ["/images/samuikidspingpong.png"],
+  "photos": [
+    "/images/samuikidspingpong.png"
+  ],
   "openingHours": "Daily 10am – 9pm",
   "featured": false,
-  "popularity": 7
+  "popularity": 7,
+  "audience": "kids"
 }

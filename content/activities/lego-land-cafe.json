@@ -4,18 +4,33 @@
   "shortDesc": "Build, play and eat — a cafe packed with Lego sets, building challenges, and creative fun.",
   "description": "Lego Land Cafe is a unique combination of cafe and creative play space where kids can spend hours building with thousands of Lego bricks while parents enjoy good coffee and Thai snacks. Themed building challenges change weekly, and staff run workshops on weekends. A perfect rainy-day or midday escape from the heat.",
   "category": "creative-learning",
-  "tags": ["lego", "building", "creative", "indoor", "cafe", "rainy day", "family-friendly"],
-  "ageGroups": ["toddlers", "kids", "tweens"],
+  "tags": [
+    "lego",
+    "building",
+    "creative",
+    "indoor",
+    "cafe",
+    "rainy day",
+    "family-friendly"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids",
+    "tweens"
+  ],
   "priceRange": "budget",
   "priceNote": "Free to play with cafe purchase",
   "location": {
-    "lat": 9.5310,
-    "lng": 100.0610,
+    "lat": 9.531,
+    "lng": 100.061,
     "address": "Chaweng Central, Koh Samui",
     "area": "Chaweng"
   },
-  "photos": ["/images/samuikidslego.png"],
+  "photos": [
+    "/images/samuikidslego.png"
+  ],
   "openingHours": "Daily 9am – 7pm",
   "featured": true,
-  "popularity": 8
+  "popularity": 8,
+  "audience": "kids"
 }

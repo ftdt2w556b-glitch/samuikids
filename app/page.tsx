@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Star, ChevronRight } from "lucide-react";
-import { getFeaturedActivities, getAllActivities } from "@/lib/activities";
+import { getFeaturedActivities, getAllActivities, getKidActivities, getFamilyActivities } from "@/lib/activities";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import ActivityCard from "@/components/activities/ActivityCard";
 import HeroSearch from "@/components/ui/HeroSearch";
@@ -11,6 +11,8 @@ import { Category } from "@/types";
 export default function HomePage() {
   const featured = getFeaturedActivities();
   const totalCount = getAllActivities().length;
+  const kidActivities = getKidActivities().slice(0, 6);
+  const familyActivities = getFamilyActivities().slice(0, 3);
 
   const categories: { key: Category; image: string; color: string; bg: string }[] = [
     { key: "nature-animals",    image: "/images/elephant.png",               color: "from-green-400 to-green-600",    bg: "#4ade80" },
@@ -120,26 +122,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FEATURED ACTIVITIES ── */}
+      {/* ── KID-CENTRIC ACTIVITIES ── */}
       <section className="bg-gradient-to-b from-sky-50 to-white py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-2">
             <div>
               <h2 className="text-2xl font-black text-gray-900 flex items-center gap-2">
-                <Star size={22} className="text-yellow-400 fill-yellow-400" />
-                Featured Activities
+                🧒 Just for Kids
               </h2>
-              <p className="text-gray-500 text-sm mt-1">Hand-picked family favourites on Koh Samui</p>
+              <p className="text-gray-500 text-sm mt-1">Supervised, kid-centric spots — drop-off friendly</p>
             </div>
             <Link
-              href="/activities"
+              href="/activities?audience=kids"
               className="text-cyan-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
             >
               View all <ChevronRight size={16} />
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.slice(0, 6).map((activity) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {kidActivities.map((activity) => (
+              <ActivityCard key={activity.slug} activity={activity} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAMILY ADVENTURES ── */}
+      <section className="bg-white py-12 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center justify-between mb-2">
+            <div>
+              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-2">
+                👨‍👩‍👧‍👦 Family Adventures
+              </h2>
+              <p className="text-gray-500 text-sm mt-1">Experiences the whole family will love together</p>
+            </div>
+            <Link
+              href="/activities?audience=family"
+              className="text-cyan-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
+            >
+              View all <ChevronRight size={16} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            {familyActivities.map((activity) => (
               <ActivityCard key={activity.slug} activity={activity} />
             ))}
           </div>

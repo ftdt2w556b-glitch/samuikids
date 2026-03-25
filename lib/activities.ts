@@ -21,3 +21,11 @@ export function getActivityBySlug(slug: string): Activity | undefined {
 export function getFeaturedActivities(): Activity[] {
   return getAllActivities().filter((a) => a.featured);
 }
+
+export function getKidActivities(): Activity[] {
+  return getAllActivities().filter((a) => a.audience === "kids");
+}
+
+export function getFamilyActivities(): Activity[] {
+  return getAllActivities().filter((a) => a.audience === "family");
+}

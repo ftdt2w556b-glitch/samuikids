@@ -4,18 +4,35 @@
   "shortDesc": "A colourful sensory adventure — tropical fruits, street food, and local life at Samui's best market.",
   "description": "A visit to a Samui fresh morning market is one of those experiences kids remember forever. Stalls overflow with exotic tropical fruits, sizzling street food, flowers, and local produce. Let kids pick out fresh fruit to try, taste Thai street snacks, and soak up the sights and smells of real Thai daily life. Best visited before 9am when it's coolest and most lively.",
   "category": "cultural",
-  "tags": ["market", "food", "cultural", "outdoor", "Thai culture", "family-friendly", "free"],
-  "ageGroups": ["toddlers", "kids", "tweens", "all-ages"],
+  "tags": [
+    "market",
+    "food",
+    "cultural",
+    "outdoor",
+    "Thai culture",
+    "family-friendly",
+    "free"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "free",
   "priceNote": "Free to browse — budget 100–300 THB for snacks",
   "location": {
-    "lat": 9.5450,
-    "lng": 100.0490,
+    "lat": 9.545,
+    "lng": 100.049,
     "address": "Bophut, Koh Samui",
     "area": "Bophut"
   },
-  "photos": ["/images/samuikidsfreshmarket.png", "/images/samuikidsfruitmarket.png"],
+  "photos": [
+    "/images/samuikidsfreshmarket.png",
+    "/images/samuikidsfruitmarket.png"
+  ],
   "openingHours": "Daily 6am – 10am",
   "featured": false,
-  "popularity": 7
+  "popularity": 7,
+  "audience": "family"
 }

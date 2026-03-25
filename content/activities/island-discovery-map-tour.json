@@ -4,18 +4,34 @@
   "shortDesc": "Rent a scooter or join a guided tour to explore hidden beaches, viewpoints, and local villages.",
   "description": "The best way to really discover Koh Samui is to explore it yourself — map in hand, with no set agenda. This self-guided or guided island discovery tour takes families to hidden beaches, local villages, jungle viewpoints, and roadside coconut farms that most tourists never find. Guided versions use a fun map-based treasure hunt format that kids love. Scooter hire or air-conditioned van options available.",
   "category": "adventure-sports",
-  "tags": ["island tour", "exploration", "self-guided", "outdoor", "family-friendly", "hidden gems", "driving"],
-  "ageGroups": ["kids", "tweens", "all-ages"],
+  "tags": [
+    "island tour",
+    "exploration",
+    "self-guided",
+    "outdoor",
+    "family-friendly",
+    "hidden gems",
+    "driving"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens",
+    "all-ages"
+  ],
   "priceRange": "budget",
   "priceNote": "Self-guided free / Guided from 500 THB per family",
   "location": {
-    "lat": 9.5300,
-    "lng": 100.0000,
+    "lat": 9.53,
+    "lng": 100,
     "address": "Island-wide, Koh Samui",
     "area": "Island-wide"
   },
-  "photos": ["/images/samuikidsmap2.png", "/images/samuikidstravel.png"],
+  "photos": [
+    "/images/samuikidsmap2.png",
+    "/images/samuikidstravel.png"
+  ],
   "openingHours": "Anytime — start early to beat the heat",
   "featured": false,
-  "popularity": 7
+  "popularity": 7,
+  "audience": "family"
 }
