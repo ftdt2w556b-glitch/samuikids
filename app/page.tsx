@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { Search, MapPin, Star, ChevronRight } from "lucide-react";
 import { getFeaturedActivities, getAllActivities } from "@/lib/activities";
 import { CATEGORY_LABELS } from "@/lib/constants";
@@ -9,6 +12,7 @@ import { Category } from "@/types";
 export default function HomePage() {
   const featured = getFeaturedActivities();
   const totalCount = getAllActivities().length;
+  const [searchText, setSearchText] = useState("");
 
   const categories: { key: Category; image: string; color: string; bg: string }[] = [
     { key: "nature-animals",    image: "/images/elephant.png",               color: "from-green-400 to-green-600",    bg: "#4ade80" },
@@ -35,10 +39,22 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-6 w-full">
-          {/* Text */}
+        <div className="relative max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center gap-6 w-full">
+          {/* Text + Logo */}
           <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-4">
+
+            {/* Big logo on homepage */}
+            <div className="relative w-48 h-48 mx-auto md:mx-0 mb-2 drop-shadow-xl">
+              <Image
+                src="/images/samuikidslogo.png"
+                alt="Samui Kids Fun Guide"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-3">
               <MapPin size={14} />
               Koh Samui, Thailand
             </div>
@@ -53,30 +69,41 @@ export default function HomePage() {
               {totalCount}+ kid-friendly activities — from elephant sanctuaries and water parks to jungle hikes and cooking classes.
             </p>
 
-            {/* Search bar */}
-            <div className="flex gap-2 max-w-md">
+            {/* Working search bar */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.location.href = `/activities${searchText ? `?search=${encodeURIComponent(searchText)}` : ""}`;
+              }}
+              className="flex gap-2 max-w-md"
+            >
               <div className="flex-1 flex items-center bg-white rounded-2xl px-4 py-3 shadow-lg gap-2">
                 <Search size={18} className="text-gray-400 shrink-0" />
-                <Link href="/activities" className="text-gray-400 text-sm w-full">
-                  Search activities like &quot;Water Park&quot;...
-                </Link>
+                <input
+                  type="text"
+                  placeholder='Search activities like "Water Park"...'
+                  value={searchText}
+                  onChange={(e) => setSearchText(e.target.value)}
+                  className="flex-1 outline-none text-sm text-gray-700 placeholder-gray-400 bg-transparent"
+                />
               </div>
-              <Link
-                href="/activities"
+              <button
+                type="submit"
                 className="bg-orange-500 hover:bg-orange-600 text-white font-black px-5 py-3 rounded-2xl shadow-lg transition-colors whitespace-nowrap"
               >
                 Explore
-              </Link>
-            </div>
+              </button>
+            </form>
           </div>
 
-          {/* Hero illustration */}
-          <div className="flex-shrink-0 relative w-72 h-44 md:w-80 md:h-52">
+          {/* Hero illustration — no white box */}
+          <div className="flex-shrink-0 relative w-72 h-52 md:w-80 md:h-60">
             <Image
               src="/images/familyandmonkey.png"
               alt="Family on Koh Samui beach"
               fill
-              className="object-contain drop-shadow-lg"
+              className="object-contain drop-shadow-2xl"
+              style={{ mixBlendMode: "multiply" }}
               priority
             />
           </div>

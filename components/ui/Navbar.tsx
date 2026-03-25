@@ -12,10 +12,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-cyan-100">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1 group">
-          <div className="relative w-14 h-14 flex-shrink-0">
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="relative w-10 h-10 flex-shrink-0">
             <Image
-              src="/images/samuikidslogo.png"
+              src="/images/elephantwithhat.png"
               alt="Samui Kids Fun Guide"
               fill
               className="object-contain"
