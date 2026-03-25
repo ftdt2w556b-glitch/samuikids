@@ -1,18 +1,15 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { Search, MapPin, Star, ChevronRight } from "lucide-react";
+import { MapPin, Star, ChevronRight } from "lucide-react";
 import { getFeaturedActivities, getAllActivities } from "@/lib/activities";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import ActivityCard from "@/components/activities/ActivityCard";
+import HeroSearch from "@/components/ui/HeroSearch";
 import { Category } from "@/types";
 
 export default function HomePage() {
   const featured = getFeaturedActivities();
   const totalCount = getAllActivities().length;
-  const [searchText, setSearchText] = useState("");
 
   const categories: { key: Category; image: string; color: string; bg: string }[] = [
     { key: "nature-animals",    image: "/images/elephant.png",               color: "from-green-400 to-green-600",    bg: "#4ade80" },
@@ -69,31 +66,7 @@ export default function HomePage() {
               {totalCount}+ kid-friendly activities — from elephant sanctuaries and water parks to jungle hikes and cooking classes.
             </p>
 
-            {/* Working search bar */}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = `/activities${searchText ? `?search=${encodeURIComponent(searchText)}` : ""}`;
-              }}
-              className="flex gap-2 max-w-md"
-            >
-              <div className="flex-1 flex items-center bg-white rounded-2xl px-4 py-3 shadow-lg gap-2">
-                <Search size={18} className="text-gray-400 shrink-0" />
-                <input
-                  type="text"
-                  placeholder='Search activities like "Water Park"...'
-                  value={searchText}
-                  onChange={(e) => setSearchText(e.target.value)}
-                  className="flex-1 outline-none text-sm text-gray-700 placeholder-gray-400 bg-transparent"
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-black px-5 py-3 rounded-2xl shadow-lg transition-colors whitespace-nowrap"
-              >
-                Explore
-              </button>
-            </form>
+            <HeroSearch />
           </div>
 
           {/* Hero illustration — no white box */}
