@@ -11,12 +11,13 @@ export default function HomePage() {
   const totalCount = getAllActivities().length;
 
   const categories: { key: Category; image: string; color: string; bg: string }[] = [
-    { key: "nature-animals",    image: "/images/elephant.png",              color: "from-green-400 to-green-600",    bg: "#4ade80" },
-    { key: "water-beaches",     image: "/images/playgroundslide.png",       color: "from-cyan-400 to-blue-500",     bg: "#22d3ee" },
-    { key: "creative-learning", image: "/images/artsandcrafts.png",         color: "from-orange-400 to-orange-600", bg: "#fb923c" },
-    { key: "adventure-sports",  image: "/images/monkeyclimb.png",           color: "from-yellow-400 to-amber-500",  bg: "#facc15" },
-    { key: "food-cafes",        image: "/images/samuikidscafe.png",         color: "from-pink-400 to-rose-500",     bg: "#f472b6" },
-    { key: "entertainment",     image: "/images/samuikidsentertainment.png", color: "from-blue-400 to-indigo-500",  bg: "#60a5fa" },
+    { key: "nature-animals",    image: "/images/elephant.png",               color: "from-green-400 to-green-600",    bg: "#4ade80" },
+    { key: "water-beaches",     image: "/images/playgroundslide.png",        color: "from-cyan-400 to-blue-500",     bg: "#22d3ee" },
+    { key: "creative-learning", image: "/images/artsandcrafts.png",          color: "from-orange-400 to-orange-600", bg: "#fb923c" },
+    { key: "adventure-sports",  image: "/images/monkeyclimb.png",            color: "from-yellow-400 to-amber-500",  bg: "#facc15" },
+    { key: "food-cafes",        image: "/images/samuikidscafe.png",          color: "from-pink-400 to-rose-500",     bg: "#f472b6" },
+    { key: "entertainment",     image: "/images/samuikidsentertainment.png", color: "from-blue-400 to-indigo-500",   bg: "#60a5fa" },
+    { key: "cultural",          image: "/images/samuikidstemple.png",        color: "from-purple-400 to-purple-600", bg: "#c084fc" },
   ];
 
   return (

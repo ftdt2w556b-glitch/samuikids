@@ -15,15 +15,33 @@ import ActivityCard from "@/components/activities/ActivityCard";
 
 interface Props {
   activities: Activity[];
+  initialCategory?: Category;
+  initialAge?: AgeGroup;
+  initialSearch?: string;
+  initialPrice?: PriceRange;
 }
 
-export default function ActivitiesClient({ activities }: Props) {
-  const [search, setSearch] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
-  const [selectedAges, setSelectedAges] = useState<AgeGroup[]>([]);
-  const [selectedPrices, setSelectedPrices] = useState<PriceRange[]>([]);
+export default function ActivitiesClient({
+  activities,
+  initialCategory,
+  initialAge,
+  initialSearch = "",
+  initialPrice,
+}: Props) {
+  const [search, setSearch] = useState(initialSearch);
+  const [selectedCategories, setSelectedCategories] = useState<Category[]>(
+    initialCategory ? [initialCategory] : []
+  );
+  const [selectedAges, setSelectedAges] = useState<AgeGroup[]>(
+    initialAge ? [initialAge] : []
+  );
+  const [selectedPrices, setSelectedPrices] = useState<PriceRange[]>(
+    initialPrice ? [initialPrice] : []
+  );
   const [sortBy, setSortBy] = useState<"popularity" | "price-low" | "price-high">("popularity");
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(
+    !!(initialCategory || initialAge || initialPrice)
+  );
 
   const PRICE_ORDER: PriceRange[] = ["free", "budget", "mid", "premium"];
 
@@ -48,23 +66,20 @@ export default function ActivitiesClient({ activities }: Props) {
     return result;
   }, [activities, search, selectedCategories, selectedAges, selectedPrices, sortBy]);
 
-  const toggleCategory = (cat: Category) => {
+  const toggleCategory = (cat: Category) =>
     setSelectedCategories((prev) =>
       prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
     );
-  };
 
-  const toggleAge = (age: AgeGroup) => {
+  const toggleAge = (age: AgeGroup) =>
     setSelectedAges((prev) =>
       prev.includes(age) ? prev.filter((a) => a !== age) : [...prev, age]
     );
-  };
 
-  const togglePrice = (price: PriceRange) => {
+  const togglePrice = (price: PriceRange) =>
     setSelectedPrices((prev) =>
       prev.includes(price) ? prev.filter((p) => p !== price) : [...prev, price]
     );
-  };
 
   const clearAll = () => {
     setSearch("");
@@ -99,7 +114,7 @@ export default function ActivitiesClient({ activities }: Props) {
         </p>
       </div>
 
-      {/* Search + controls bar */}
+      {/* Search + controls */}
       <div className="flex gap-3 mb-6 flex-wrap">
         <div className="flex-1 min-w-[200px] flex items-center bg-white border border-gray-200 rounded-2xl px-4 py-3 gap-2 shadow-sm focus-within:ring-2 focus-within:ring-cyan-400 focus-within:border-cyan-400 transition">
           <Search size={18} className="text-gray-400 shrink-0" />
@@ -149,7 +164,6 @@ export default function ActivitiesClient({ activities }: Props) {
       {showFilters && (
         <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-6 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Category */}
             <div>
               <h3 className="font-black text-gray-800 text-sm mb-3 uppercase tracking-wide">Category</h3>
               <div className="flex flex-wrap gap-2">
@@ -169,7 +183,6 @@ export default function ActivitiesClient({ activities }: Props) {
               </div>
             </div>
 
-            {/* Age */}
             <div>
               <h3 className="font-black text-gray-800 text-sm mb-3 uppercase tracking-wide">Age Group</h3>
               <div className="flex flex-wrap gap-2">
@@ -189,7 +202,6 @@ export default function ActivitiesClient({ activities }: Props) {
               </div>
             </div>
 
-            {/* Price */}
             <div>
               <h3 className="font-black text-gray-800 text-sm mb-3 uppercase tracking-wide">Price Range</h3>
               <div className="flex flex-wrap gap-2">
@@ -256,7 +268,7 @@ export default function ActivitiesClient({ activities }: Props) {
         </div>
       )}
 
-      {/* Results grid */}
+      {/* Results */}
       {filtered.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((activity) => (
