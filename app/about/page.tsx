@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, MapPin, Heart } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
   title: "About",
@@ -75,29 +76,10 @@ export default function AboutPage() {
         <p className="text-slate-400 mb-6">
           Know a great activity we&apos;re missing? Want to list your business? We&apos;d love to hear from you.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a
-            href="mailto:hello@samuikids.com"
-            className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-colors"
-          >
-            <Mail size={18} className="text-cyan-400" />
-            <div>
-              <div className="font-black text-sm">Email Us</div>
-              <div className="text-slate-400 text-xs">hello@samuikids.com</div>
-            </div>
-          </a>
-          <a
-            href="mailto:list@samuikids.com"
-            className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-4 transition-colors"
-          >
-            <Heart size={18} className="text-orange-400" />
-            <div>
-              <div className="font-black text-sm">List Your Activity</div>
-              <div className="text-slate-400 text-xs">list@samuikids.com</div>
-            </div>
-          </a>
-        </div>
-        <p className="text-slate-500 text-xs mt-6 flex items-center gap-1">
+
+        <ContactForm />
+
+        <p className="text-slate-600 text-xs mt-6 flex items-center gap-1">
           <MapPin size={12} /> Based on Koh Samui, Surat Thani, Thailand
         </p>
       </div>
