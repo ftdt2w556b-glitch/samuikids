@@ -1,7 +1,15 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: "mail.samuikids.com",
+  port: 465,
+  secure: true, // SSL
+  auth: {
+    user: "hello@samuikids.com",
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,9 +30,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    await resend.emails.send({
-      from: "Samui Kids Contact <hello@samuikids.com>",
-      to: ["hello@samuikids.com"],
+    await transporter.sendMail({
+      from: '"Samui Kids Contact" <hello@samuikids.com>',
+      to: "hello@samuikids.com",
       replyTo: email,
       subject: subject
         ? `[SamuiKids] ${subject}`
