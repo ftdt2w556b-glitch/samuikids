@@ -1,36 +1,23 @@
 {
   "slug": "kids-cooking-class",
-  "title": "Kids Thai Cooking Class",
-  "shortDesc": "Little chefs learn to make Pad Thai and mango sticky rice in this hands-on family cooking class.",
-  "description": "This fun, hands-on Thai cooking class is designed specifically for kids and families. Children as young as 5 can join, guided by a friendly chef to cook authentic Thai dishes like Pad Thai, spring rolls, and mango sticky rice. Classes are held in an open-air kitchen and include a visit to the morning market to pick fresh ingredients. You eat what you cook!",
-  "category": "creative-learning",
-  "tags": [
-    "cooking",
-    "Thai food",
-    "cultural",
-    "hands-on",
-    "family-friendly",
-    "educational"
-  ],
-  "ageGroups": [
-    "kids",
-    "tweens",
-    "all-ages"
-  ],
-  "priceRange": "mid",
-  "priceNote": "From 800 THB per person, children 400 THB",
+  "title": "Spice Spoons Kids Cooking",
+  "shortDesc": "Supervised kids Thai cooking class at Anantara Bophut — ages 5–12 make pizza, burgers and Thai snacks with chef instructors.",
+  "description": "Spice Spoons at Anantara Bophut is Koh Samui's most recognised cooking school. The dedicated kids class (ages 5–12) features a fun menu of pizza and burger making alongside Thai snacks, all supervised by professional chef instructors. The experience includes a tour of the herb garden. Adults can join the full Thai cooking class simultaneously (ages 12+). A genuine drop-off experience with structured, chef-led supervision.",
+  "category": "food-cafes",
+  "tags": ["cooking", "kids class", "supervised", "drop-off", "thai food", "chef"],
+  "ageGroups": ["kids"],
+  "priceRange": "premium",
+  "priceNote": "Kids class pricing on request. Adult class 2,400 THB++.",
   "location": {
-    "lat": 9.545,
-    "lng": 100.048,
-    "address": "Bophut Fisherman's Village, Koh Samui",
+    "lat": 9.5510,
+    "lng": 100.0270,
+    "address": "99/9 Bophut Bay, Anantara Bophut Resort",
     "area": "Bophut"
   },
-  "photos": [
-    "/images/samuikidscooking.png",
-    "/images/samuikidscooking2.png"
-  ],
-  "openingHours": "Classes at 10am and 3pm daily",
+  "photos": ["/images/samuikidscooking.png"],
+  "openingHours": "Contact resort for schedule",
+  "website": "https://www.anantara.com/en/bophut-koh-samui/experiences/spice-spoons",
   "featured": true,
-  "popularity": 9,
+  "popularity": 8,
   "audience": "kids"
 }

@@ -1,36 +1,23 @@
 {
   "slug": "learn-thai-language",
-  "title": "Kids Thai Language Class",
-  "shortDesc": "Fun, interactive Thai language lessons for kids — learn greetings, numbers, and fun phrases.",
-  "description": "These fun Thai language sessions are designed for children and families visiting Koh Samui. In just one hour, kids learn basic greetings, how to count, order food, and say polite phrases in Thai. The lessons use games, songs, and visual aids — not textbooks. Teachers are patient, friendly, and make it a memorable cultural experience. Great for curious kids who want to connect with locals.",
+  "title": "KSTVS Kids English Classes",
+  "shortDesc": "Award-winning language school in Maenam offering structured English classes for children — weekdays 4–6pm and Saturdays.",
+  "description": "Koh Samui Language & Vocational School (KSTVS) in Maenam has been recognised three times by Thailand's Ministry of Education as an outstanding school. Children's English classes run at all levels (A1 beginner through C2 advanced) taught by native English speakers. Three terms per year, weekday classes 4–6pm and Saturdays 1–4pm. Summer English Camps combine language learning with supervised trips around the island. A proper school setting — full drop-off.",
   "category": "creative-learning",
-  "tags": [
-    "Thai language",
-    "educational",
-    "cultural",
-    "kids",
-    "language",
-    "family-friendly"
-  ],
-  "ageGroups": [
-    "kids",
-    "tweens",
-    "all-ages"
-  ],
-  "priceRange": "budget",
-  "priceNote": "From 350 THB per child",
+  "tags": ["language", "english", "class", "supervised", "drop-off", "school", "summer camp"],
+  "ageGroups": ["kids", "tweens"],
+  "priceRange": "mid",
+  "priceNote": "Contact school for term fees. Summer camp pricing available on request.",
   "location": {
-    "lat": 9.544,
-    "lng": 100.05,
-    "address": "Bophut, Koh Samui",
-    "area": "Bophut"
+    "lat": 9.5580,
+    "lng": 99.9870,
+    "address": "11/8 Moo 1, Maenam",
+    "area": "Maenam"
   },
-  "photos": [
-    "/images/samuikidslearnthai.png",
-    "/images/samuikidsthailanguageclasses.png"
-  ],
-  "openingHours": "Classes Mon–Sat 9am and 2pm",
-  "featured": false,
+  "photos": ["/images/samuikidsthailanguageclasses.png"],
+  "openingHours": "Weekdays 4–6pm, Sat 1–4pm",
+  "website": "https://kstvs.com/english-course-children",
+  "featured": true,
   "popularity": 7,
   "audience": "kids"
 }

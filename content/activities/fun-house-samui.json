@@ -1,0 +1,23 @@
+{
+  "slug": "fun-house-samui",
+  "title": "Fun House Samui",
+  "shortDesc": "Large indoor soft play park with slides, climbing walls, ball pits and trampolines — plus a cafe so parents can relax on-site.",
+  "description": "Fun House Samui is a large indoor soft play centre with slides, climbing walls, ball pits, obstacle courses and a dedicated toddler area. The facility has a minimum of two staff on-site at all times plus CCTV, making it genuinely drop-off friendly. Parents who stay can relax in the on-site cafe and restaurant. Socks required — 50 THB to buy on-site if needed.",
+  "category": "entertainment",
+  "tags": ["indoor play", "soft play", "drop-off", "supervised", "toddler", "climbing"],
+  "ageGroups": ["toddlers", "kids"],
+  "priceRange": "budget",
+  "priceNote": "100 THB/hour per child. Adults free.",
+  "location": {
+    "lat": 9.5480,
+    "lng": 100.0340,
+    "address": "Soi Bandon Hospital Road, Bophut",
+    "area": "Bophut"
+  },
+  "photos": ["/images/samuikidsentertainment2.png"],
+  "openingHours": "Tue–Sun 10:30am–8:30pm. Closed Mondays.",
+  "website": "https://facebook.com/funhousesamui",
+  "featured": true,
+  "popularity": 8,
+  "audience": "kids"
+}

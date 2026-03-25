@@ -1,0 +1,23 @@
+{
+  "slug": "mk-ultra-pottery",
+  "title": "MK Ultra Pottery Studio",
+  "shortDesc": "Koh Samui's only pottery studio — wheel throwing, hand-building and glazing in a sensory-friendly space from age 7.",
+  "description": "MK Ultra Artists is the island's only dedicated pottery studio offering wheel throwing, hand-building with slab technique, and pottery painting and glazing. The two-step process makes it a memorable experience: make your piece in class, then return to glaze it after firing (2–3 week turnaround — ideal for longer stays or expat families). Specifically noted as sensory-friendly and suitable for neurodivergent children. Reservations required.",
+  "category": "creative-learning",
+  "tags": ["pottery", "clay", "craft", "supervised", "sensory-friendly", "creative", "drop-off"],
+  "ageGroups": ["kids", "tweens"],
+  "priceRange": "mid",
+  "priceNote": "Firing + glazing from 350 THB per piece. Class fees on website.",
+  "location": {
+    "lat": 9.5420,
+    "lng": 100.0440,
+    "address": "16/41 Moo 4, Bo Put, Bangrak",
+    "area": "Bangrak"
+  },
+  "photos": ["/images/artsandcrafts.png"],
+  "openingHours": "By reservation",
+  "website": "https://mkultraart.com",
+  "featured": false,
+  "popularity": 6,
+  "audience": "kids"
+}

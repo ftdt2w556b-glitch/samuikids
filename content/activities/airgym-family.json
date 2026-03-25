@@ -1,0 +1,23 @@
+{
+  "slug": "airgym-family",
+  "title": "AirGym Family",
+  "shortDesc": "Koh Samui's first aerial arts and family fitness centre — kids classes in aerial silks, Zumba, dance and seasonal summer camps.",
+  "description": "AirGym Family is Koh Samui's first professional aerial arts and family fitness centre spread across three floors. Kids classes include aerial silks, hoops, poles and ropes, plus Kids Zumba (ages 3–7), dance foundation through advanced, and seasonal Kids Summer Camps running 10am–3:30pm daily with a structured program. Professional teachers with assistants during camps. Parents can train in separate adult zones at the same time.",
+  "category": "adventure-sports",
+  "tags": ["aerial arts", "dance", "zumba", "supervised", "drop-off", "summer camp", "fitness"],
+  "ageGroups": ["toddlers", "kids", "tweens"],
+  "priceRange": "mid",
+  "priceNote": "Contact via WhatsApp +66 635 070 327 for schedule and pricing",
+  "location": {
+    "lat": 9.5550,
+    "lng": 100.0100,
+    "address": "North Koh Samui",
+    "area": "North Samui"
+  },
+  "photos": ["/images/samuikidsentertainment.png"],
+  "openingHours": "See schedule at airgym.family/schedule",
+  "website": "https://airgym.family",
+  "featured": false,
+  "popularity": 7,
+  "audience": "kids"
+}

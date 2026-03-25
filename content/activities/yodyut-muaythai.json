@@ -1,0 +1,23 @@
+{
+  "slug": "yodyut-muaythai",
+  "title": "Yodyut Muay Thai Kids",
+  "shortDesc": "Authentic Muay Thai training with 8 full-time Thai trainers — structured supervised classes for children from age 8.",
+  "description": "Yodyut Muay Thai Gym near Choeng Mon Beach is one of Koh Samui's most established Muay Thai facilities with 8 full-time Thai trainers, two full-sized boxing rings, bags, matted floors and strength equipment. Classes are tailored to each student's level and the gym is specifically described as well-supervised for girls and children. A great discipline-building activity for kids 8 and above.",
+  "category": "adventure-sports",
+  "tags": ["muay thai", "martial arts", "supervised", "fitness", "discipline", "drop-off"],
+  "ageGroups": ["tweens", "kids"],
+  "priceRange": "mid",
+  "priceNote": "Contact gym directly for class fees",
+  "location": {
+    "lat": 9.5670,
+    "lng": 100.0580,
+    "address": "76/77 Moo 5, Choeng Mon",
+    "area": "Choeng Mon"
+  },
+  "photos": ["/images/samuikidsninja.png"],
+  "openingHours": "Mon–Sat 8am–8pm. Closed Sundays.",
+  "website": "https://yodyutmuaythai.com",
+  "featured": false,
+  "popularity": 7,
+  "audience": "kids"
+}

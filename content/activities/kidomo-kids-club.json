@@ -1,0 +1,23 @@
+{
+  "slug": "kidomo-kids-club",
+  "title": "Kidomo Kids Club",
+  "shortDesc": "Bright, Montessori-leaning indoor play space with board games, sensory play, crafting and books — fully staffed drop-off.",
+  "description": "Kidomo Kids Club is one of Koh Samui's best supervised drop-off play spaces. The clean, air-conditioned space features magnetic tiles, sensory play zones, crafting corners, imaginative play areas and books — all curated with a Montessori approach. Staff engage actively with children so parents can enjoy a coffee break nearby. Adults enter free. A 10-hour punch card makes regular visits great value.",
+  "category": "entertainment",
+  "tags": ["indoor play", "drop-off", "supervised", "montessori", "crafts", "sensory"],
+  "ageGroups": ["kids"],
+  "priceRange": "budget",
+  "priceNote": "250 THB/hour per child. 10-hour card 200 THB/hour.",
+  "location": {
+    "lat": 9.5316,
+    "lng": 100.0622,
+    "address": "26/31 Ring Road, Chaweng",
+    "area": "Chaweng"
+  },
+  "photos": ["/images/samuikidsentertainment.png"],
+  "openingHours": "Mon–Thu & Sat 10am–6pm, Sun 12–5pm. Closed Fridays.",
+  "website": "https://kidomokids.com",
+  "featured": true,
+  "popularity": 9,
+  "audience": "kids"
+}

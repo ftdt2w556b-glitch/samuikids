@@ -1,0 +1,23 @@
+{
+  "slug": "art-in-mind-samui",
+  "title": "Art in Mind Studio",
+  "shortDesc": "Beloved art school and garden studio offering painting, clay and craft workshops — kids from age 5 happily fill 90-minute sessions.",
+  "description": "Art in Mind is a well-loved art school and garden studio in Bophut run by Kru Gae, who is praised by visitors for her ability to engage children and adults alike. Classes cover painting, clay work and various craft mediums in a relaxed studio-garden setting. Children aged 5 and above have been consistently noted as fully engaged for the full session length. Structured class format with a qualified instructor makes this a reliable drop-off option.",
+  "category": "creative-learning",
+  "tags": ["art", "craft", "painting", "clay", "supervised", "drop-off", "creative"],
+  "ageGroups": ["kids", "tweens", "all-ages"],
+  "priceRange": "mid",
+  "priceNote": "~650 THB adult class. Kids pricing on request.",
+  "location": {
+    "lat": 9.5490,
+    "lng": 100.0310,
+    "address": "Bophut Chaweng Yai Soi 10, opposite Chaweng post office",
+    "area": "Bophut"
+  },
+  "photos": ["/images/artsandcrafts.png"],
+  "openingHours": "Tue–Sat (check Facebook for current schedule)",
+  "website": "https://facebook.com/artinmindsamui",
+  "featured": false,
+  "popularity": 7,
+  "audience": "kids"
+}
