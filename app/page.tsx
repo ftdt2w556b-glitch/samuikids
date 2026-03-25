@@ -66,13 +66,12 @@ export default function HomePage() {
       <section className="bg-white py-6 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-8">
           {[
-            { icon: "🎯", label: `${totalCount}+ Activities`, sub: "Curated & verified" },
-            { icon: "👨‍👩‍👧‍👦", label: "All Ages",          sub: "Toddlers to teens" },
-            { icon: "🗺️", label: "Interactive Map",       sub: "Find what's nearby" },
-            { icon: "💚", label: "Free to Use",           sub: "No account needed" },
-          ].map(({ icon, label, sub }) => (
+            { label: `${totalCount}+ Activities`, sub: "Curated & verified" },
+            { label: "All Ages",                  sub: "Toddlers to teens" },
+            { label: "Interactive Map",           sub: "Find what's nearby" },
+            { label: "Free to Use",               sub: "No account needed" },
+          ].map(({ label, sub }) => (
             <div key={label} className="flex items-center gap-3">
-              <span className="text-2xl">{icon}</span>
               <div>
                 <div className="font-black text-gray-900 text-sm">{label}</div>
                 <div className="text-gray-400 text-xs">{sub}</div>
@@ -124,10 +123,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between mb-2">
             <div>
-              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-2">
-                🧒 Just for Kids
+              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-3">
+                <span className="relative w-8 h-8 flex-shrink-0">
+                  <Image src="/images/samuikidsshopping.png" alt="" fill className="object-contain" />
+                </span>
+                Just for Kids
               </h2>
-              <p className="text-gray-500 text-sm mt-1">Supervised, kid-centric spots — drop-off friendly</p>
+              <p className="text-gray-500 text-sm mt-1">Supervised spots with staff — drop-off friendly</p>
             </div>
             <Link
               href="/activities?audience=kids"
@@ -149,8 +151,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between mb-2">
             <div>
-              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-2">
-                👨‍👩‍👧‍👦 Family Adventures
+              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-3">
+                <span className="relative w-8 h-8 flex-shrink-0">
+                  <Image src="/images/samuikidsfamily2.png" alt="" fill className="object-contain" />
+                </span>
+                Family Adventures
               </h2>
               <p className="text-gray-500 text-sm mt-1">Experiences the whole family will love together</p>
             </div>
@@ -180,17 +185,17 @@ export default function HomePage() {
           <p className="text-white/80 mb-6 font-semibold">Filter exactly what works for your family</p>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              { label: "Toddlers 0–3", value: "toddlers", emoji: "👶" },
-              { label: "Kids 4–10",    value: "kids",      emoji: "🧒" },
-              { label: "Tweens 11–15", value: "tweens",    emoji: "🧑" },
-              { label: "All Ages",     value: "all-ages",  emoji: "👨‍👩‍👧‍👦" },
-            ].map(({ label, value, emoji }) => (
+              { label: "Toddlers 0–3", value: "toddlers" },
+              { label: "Kids 4–10",    value: "kids" },
+              { label: "Tweens 11–15", value: "tweens" },
+              { label: "All Ages",     value: "all-ages" },
+            ].map(({ label, value }) => (
               <Link
                 key={value}
                 href={`/activities?age=${value}`}
                 className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-bold px-5 py-2.5 rounded-full transition-colors border border-white/30"
               >
-                {emoji} {label}
+                {label}
               </Link>
             ))}
           </div>
@@ -201,7 +206,9 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 pb-16">
         <div className="bg-slate-800 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-white">
           <div>
-            <div className="text-4xl mb-3">🗺️</div>
+            <div className="relative w-12 h-12 mb-3">
+              <Image src="/images/samuikidsmap.png" alt="" fill className="object-contain" />
+            </div>
             <h2 className="text-xl font-black mb-1">Explore the Interactive Map</h2>
             <p className="text-slate-400 font-semibold">
               See all activities pinned on a map — find what&apos;s near your hotel.

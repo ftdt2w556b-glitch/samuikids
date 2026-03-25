@@ -124,20 +124,20 @@ export default function ActivitiesClient({
       {/* Audience tabs */}
       <div className="flex gap-2 mb-6">
         {([
-          { value: "all",    label: "All Activities",      emoji: "🌟" },
-          { value: "kids",   label: "Just for Kids",       emoji: "🧒" },
-          { value: "family", label: "Family Adventures",   emoji: "👨‍👩‍👧‍👦" },
-        ] as { value: Audience | "all"; label: string; emoji: string }[]).map(({ value, label, emoji }) => (
+          { value: "all",    label: "All Activities" },
+          { value: "kids",   label: "Just for Kids" },
+          { value: "family", label: "Family Adventures" },
+        ] as { value: Audience | "all"; label: string }[]).map(({ value, label }) => (
           <button
             key={value}
             onClick={() => setAudience(value)}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-bold text-sm transition-all border ${
+            className={`px-4 py-2 rounded-full font-bold text-sm transition-all border ${
               audience === value
                 ? "bg-cyan-500 text-white border-cyan-500 shadow-sm"
                 : "bg-white text-gray-600 border-gray-200 hover:border-cyan-300"
             }`}
           >
-            {emoji} {label}
+            {label}
           </button>
         ))}
       </div>
