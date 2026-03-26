@@ -12,13 +12,13 @@ export default function HeroSearch() {
         e.preventDefault();
         window.location.href = `/activities${searchText ? `?search=${encodeURIComponent(searchText)}` : ""}`;
       }}
-      className="flex gap-2 max-w-md"
+      className="flex w-full gap-2 mt-4"
     >
       <div className="flex-1 flex items-center bg-white rounded-2xl px-4 py-3 shadow-lg gap-2">
         <Search size={18} className="text-gray-400 shrink-0" />
         <input
           type="text"
-          placeholder='Search activities like "Water Park"...'
+          placeholder='Search ninja gyms, cooking classes, cat cafes...'
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           className="flex-1 outline-none text-sm text-gray-700 placeholder-gray-400 bg-transparent"

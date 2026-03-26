@@ -28,58 +28,53 @@ export default function HomePage() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative bg-gradient-to-b from-sky-400 via-cyan-400 to-cyan-300 overflow-hidden flex items-center">
+      <section className="relative bg-gradient-to-b from-sky-400 via-cyan-400 to-cyan-300 overflow-hidden">
         {/* Decorative blobs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-yellow-300/30 blur-2xl" />
           <div className="absolute top-20 -right-10 w-52 h-52 rounded-full bg-blue-300/40 blur-2xl" />
-          <div
-            className="absolute bottom-0 left-0 right-0 h-16 bg-white"
-            style={{ clipPath: "ellipse(55% 100% at 50% 100%)" }}
-          />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 py-10 pb-16 w-full flex flex-col md:flex-row items-center gap-6 md:gap-12">
-          {/* Text — order-1 on mobile (top), order-2 on desktop (right) */}
-          <div className="order-1 md:order-2 flex-1 text-center md:text-left min-w-0">
-            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-3">
-              <MapPin size={14} />
-              Koh Samui, Thailand
-            </div>
-            <RotatingHero />
-            <HeroSearch />
+        {/* Centered content */}
+        <div className="relative max-w-xl mx-auto px-5 pt-8 pb-10 text-center">
+          {/* Logo — prominent at top center */}
+          <div className="relative w-52 h-52 sm:w-60 sm:h-60 mx-auto mb-3 drop-shadow-2xl">
+            <Image src="/images/samuikidslogo.png" alt="Samui Kids Fun Guide" fill className="object-contain" priority />
           </div>
 
-          {/* Logo — order-2 on mobile (below text, smaller), order-1 on desktop (left, larger) */}
-          <div className="order-2 md:order-1 flex-shrink-0 relative w-40 h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 drop-shadow-2xl mx-auto md:mx-0">
-            <Image
-              src="/images/samuikidslogo.png"
-              alt="Samui Kids Fun Guide"
-              fill
-              className="object-contain"
-              priority
-            />
+          {/* Location pill */}
+          <div className="inline-flex items-center gap-1.5 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-xs tracking-widest uppercase mb-4">
+            <MapPin size={11} />
+            Koh Samui, Thailand
           </div>
-        </div>
-      </section>
 
-      {/* ── QUICK STATS ── */}
-      <section className="bg-white py-6 border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-8">
-          {[
-            { label: `${totalCount}+ Activities`, sub: "Curated & verified" },
-            { label: "All Ages",                  sub: "Toddlers to teens" },
-            { label: "Interactive Map",           sub: "Find what's nearby" },
-            { label: "Free to Use",               sub: "No account needed" },
-          ].map(({ label, sub }) => (
-            <div key={label} className="flex items-center gap-3">
-              <div>
-                <div className="font-black text-gray-900 text-sm">{label}</div>
-                <div className="text-gray-400 text-xs">{sub}</div>
+          {/* Rotating headline + sub */}
+          <RotatingHero />
+
+          {/* Search — full width */}
+          <HeroSearch />
+
+          {/* Stats cards inside hero */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-6">
+            {[
+              { icon: "/images/samuikidsninja.png",   label: `${totalCount}+ Activities`, sub: "Verified" },
+              { icon: "/images/samuikidsfamily2.png",  label: "All Ages",                  sub: "Toddlers to teens" },
+              { icon: "/images/samuikidsmap.png",      label: "Interactive Map",            sub: "Find nearby" },
+              { icon: "/images/samuikidssquirel.png",  label: "Free to Use",               sub: "No account needed" },
+            ].map(({ icon, label, sub }) => (
+              <div key={label} className="bg-white/25 backdrop-blur-sm rounded-2xl px-3 py-3 flex flex-col items-center gap-1.5 border border-white/30">
+                <div className="relative w-9 h-9 flex-shrink-0">
+                  <Image src={icon} alt={label} fill className="object-contain" sizes="36px" />
+                </div>
+                <div className="text-white font-black text-xs leading-tight text-center">{label}</div>
+                <div className="text-white/80 text-[10px] font-semibold text-center">{sub}</div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        {/* White wave curve at bottom */}
+        <div className="h-10 bg-white" style={{ clipPath: "ellipse(55% 100% at 50% 100%)" }} />
       </section>
 
       {/* ── CATEGORIES ── */}
