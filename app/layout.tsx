@@ -28,9 +28,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://samuikids.com",
-    siteName: "Samui Kids Fun Guide",
-    title: "Samui Kids Fun Guide: Family Activities on Koh Samui",
-    description: "The complete guide to kid-friendly activities on Koh Samui, Thailand.",
+    siteName: "SamuiKids.com",
+    title: "SamuiKids.com — Drop-off Supervised Kids Activities on Koh Samui",
+    description: "The drop-off guide for supervised kid activities on Koh Samui, Thailand. Every listing is built for children.",
+    images: [
+      {
+        url: "https://samuikids.com/images/samuikidsog.png",
+        width: 1200,
+        height: 630,
+        alt: "SamuiKids.com — Drop-off Supervised Kids Activities on Koh Samui",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SamuiKids.com — Drop-off Supervised Kids Activities on Koh Samui",
+    description: "The drop-off guide for supervised kid activities on Koh Samui, Thailand.",
+    images: ["https://samuikids.com/images/samuikidsog.png"],
   },
 };
 
