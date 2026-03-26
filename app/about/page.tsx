@@ -104,11 +104,32 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* Legal businesses */}
+      <div className="bg-white border border-gray-200 rounded-3xl p-8 mb-10">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="relative w-14 h-14 flex-shrink-0">
+            <Image src="/images/samuikidstemple.png" alt="" fill className="object-contain" sizes="56px" />
+          </div>
+          <h2 className="text-2xl font-black text-gray-900">Legal and Legitimate</h2>
+        </div>
+        <div className="space-y-3 text-gray-600 leading-relaxed text-base">
+          <p>
+            Every business listed on SamuiKids.com is legally registered in Thailand. We verify this before any listing goes live. No exceptions.
+          </p>
+          <p>
+            This matters for two reasons. First, it protects families. Legally registered businesses are accountable, insured, and operating within Thai law. Second, it protects the island. Thailand takes digital business listings seriously, and we are proud to support the local economy by listing only businesses that play by the rules.
+          </p>
+          <p className="text-cyan-700 font-semibold">
+            If you want to list your business, you will be asked to confirm your legal registration as part of the process.
+          </p>
+        </div>
+      </div>
+
       {/* Contact */}
       <div id="contact" className="bg-slate-800 rounded-3xl p-8 text-white mb-10">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="relative w-10 h-10 flex-shrink-0">
-            <Image src="/images/samuikidscat.png" alt="" fill className="object-contain" sizes="40px" />
+        <div className="flex items-center gap-4 mb-2">
+          <div className="relative w-16 h-16 flex-shrink-0">
+            <Image src="/images/samuikidscat.png" alt="" fill className="object-contain" sizes="64px" />
           </div>
           <h2 className="text-2xl font-black">Get in Touch</h2>
         </div>
@@ -128,7 +149,7 @@ export default function AboutPage() {
           className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg text-lg"
         >
           <span className="relative w-8 h-8 flex-shrink-0">
-            <Image src="/images/samuikidssquirel.png" alt="" fill className="object-contain" />
+            <Image src="/images/samuikidsmonkey.png" alt="" fill className="object-contain" />
           </span>
           Find Drop-off Activities
         </Link>

@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const { name, email, subject, message, bizDetails } = await req.json();
 
     // Basic validation
     if (!name || !email || !message) {
@@ -63,8 +63,24 @@ export async function POST(req: NextRequest) {
           <h3 style="color:#374151;margin-bottom:8px;">Message</h3>
           <div style="background:#f9fafb;border-radius:8px;padding:16px;color:#374151;line-height:1.6;white-space:pre-wrap;">${message}</div>
 
+          ${bizDetails ? `
+          <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0;" />
+          <h3 style="color:#f97316;margin-bottom:12px;">Business Listing Details</h3>
+          <table style="width:100%;border-collapse:collapse;background:#fff7ed;border-radius:8px;padding:12px;">
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;width:160px;">Business Name</td><td style="padding:6px 12px;color:#111827;">${bizDetails.businessName}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Area</td><td style="padding:6px 12px;color:#111827;">${bizDetails.area || "Not specified"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Website</td><td style="padding:6px 12px;color:#111827;">${bizDetails.website || "Not provided"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Age Range</td><td style="padding:6px 12px;color:#111827;">${bizDetails.ageRange || "Not specified"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">English Spoken</td><td style="padding:6px 12px;color:#111827;">${bizDetails.englishSpoken ? "Yes" : "No"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Session Types</td><td style="padding:6px 12px;color:#111827;">${bizDetails.sessionTypes || "Not specified"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Session Lengths</td><td style="padding:6px 12px;color:#111827;">${bizDetails.sessionLengths || "Not specified"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Food / Drinks</td><td style="padding:6px 12px;color:#111827;">${[bizDetails.hasFood && "Food", bizDetails.hasDrinks && "Drinks"].filter(Boolean).join(", ") || "None"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Drop-off</td><td style="padding:6px 12px;color:#111827;">${bizDetails.dropOff ? "Yes" : "No"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Legally Registered</td><td style="padding:6px 12px;color:${bizDetails.legallyRegistered ? "#059669" : "#dc2626"};font-weight:700;">${bizDetails.legallyRegistered ? "YES - confirmed" : "NOT confirmed"}</td></tr>
+          </table>
+          ` : ""}
           <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0;" />
-          <p style="color:#9ca3af;font-size:12px;">Sent via SamuiKids.com contact form · Reply directly to this email to respond to ${name}</p>
+          <p style="color:#9ca3af;font-size:12px;">Sent via SamuiKids.com contact form. Reply directly to respond to ${name}</p>
         </div>
       `,
     });

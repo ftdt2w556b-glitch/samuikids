@@ -68,7 +68,7 @@ export default function ActivityCard({ activity }: Props) {
             {activity.shortDesc}
           </p>
 
-          {/* Age range + session type chips */}
+          {/* Info chips */}
           <div className="flex flex-wrap gap-1.5 mb-3">
             {ageLabel ? (
               <span className="text-xs font-bold bg-cyan-50 text-cyan-700 px-2 py-0.5 rounded-full border border-cyan-100">
@@ -81,14 +81,24 @@ export default function ActivityCard({ activity }: Props) {
                 </span>
               ))
             )}
+            {activity.englishSpoken && (
+              <span className="text-xs font-bold bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full border border-blue-100">
+                English
+              </span>
+            )}
             {activity.sessionType && (
               <span className="text-xs font-bold bg-purple-50 text-purple-600 px-2 py-0.5 rounded-full border border-purple-100 capitalize">
                 {activity.sessionType === "both" ? "Private or Group" : activity.sessionType}
               </span>
             )}
-            {activity.allDayOption && (
-              <span className="text-xs font-bold bg-amber-50 text-amber-600 px-2 py-0.5 rounded-full border border-amber-100">
-                All-day
+            {activity.sessionLengths?.map((l) => (
+              <span key={l} className="text-xs font-bold bg-amber-50 text-amber-600 px-2 py-0.5 rounded-full border border-amber-100 capitalize">
+                {l === "half-day" ? "Half-day" : l.charAt(0).toUpperCase() + l.slice(1)}
+              </span>
+            ))}
+            {(activity.hasFood || activity.hasDrinks) && (
+              <span className="text-xs font-bold bg-pink-50 text-pink-600 px-2 py-0.5 rounded-full border border-pink-100">
+                {activity.hasFood && activity.hasDrinks ? "Food + Drinks" : activity.hasFood ? "Food" : "Drinks"}
               </span>
             )}
           </div>

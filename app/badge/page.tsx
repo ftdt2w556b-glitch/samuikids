@@ -15,8 +15,8 @@ export default function BadgePage() {
       <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden">
 
         {/* Top gradient band */}
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 pt-8 pb-6 text-center">
-          <div className="relative w-40 h-40 mx-auto mb-3 drop-shadow-xl">
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-600 px-6 pt-5 pb-3 text-center">
+          <div className="relative w-40 h-40 mx-auto mb-1 drop-shadow-xl">
             <Image
               src="/images/samuikidslogo.png"
               alt="SamuiKids.com Member Badge"

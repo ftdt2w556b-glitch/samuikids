@@ -33,10 +33,15 @@ export interface Activity {
   featured: boolean;
   popularity: number; // 1-10
   audience: Audience;
-  dropOff?: boolean;        // parents can leave kids with staff
-  memberDiscount?: boolean; // offers SamuiKids.com member discount
+  dropOff?: boolean;
+  memberDiscount?: boolean;
   sessionType?: "private" | "group" | "both";
-  allDayOption?: boolean;   // has multi-hour or full-day option
-  ageMin?: number;          // minimum age in years
-  ageMax?: number;          // maximum age in years
+  sessionLengths?: ("hourly" | "half-day" | "daily")[];
+  allDayOption?: boolean;
+  ageMin?: number;
+  ageMax?: number;
+  englishSpoken?: boolean;
+  hasFood?: boolean;
+  hasDrinks?: boolean;
+  legallyRegistered?: boolean;
 }
