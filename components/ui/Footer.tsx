@@ -51,8 +51,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/tours" className="hover:text-cyan-400 transition-colors">
-                Day Tours
+              <Link href="/itineraries" className="hover:text-cyan-400 transition-colors">
+                Day Itineraries
               </Link>
             </li>
             <li>

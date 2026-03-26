@@ -27,7 +27,7 @@ export default async function EditTourPage({ params }: { params: Promise<{ id: s
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <div className="bg-slate-800 border-b border-slate-700 px-6 py-4 flex items-center gap-4">
-        <Link href="/admin/tours" className="text-cyan-400 font-bold text-sm hover:text-cyan-300">
+        <Link href="/admin/itineraries" className="text-cyan-400 font-bold text-sm hover:text-cyan-300">
           ← Tours
         </Link>
         <h1 className="text-lg font-black">{tour.title}</h1>
@@ -133,7 +133,7 @@ export default async function EditTourPage({ params }: { params: Promise<{ id: s
         {/* Preview link */}
         <div className="text-center">
           <Link
-            href={`/tours/${tour.slug}`}
+            href={`/itineraries/${tour.slug}`}
             target="_blank"
             className="text-cyan-400 text-sm font-bold hover:text-cyan-300 underline underline-offset-2"
           >

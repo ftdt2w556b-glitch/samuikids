@@ -14,7 +14,7 @@ export default async function NewTourPage() {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <div className="bg-slate-800 border-b border-slate-700 px-6 py-4 flex items-center gap-4">
-        <Link href="/admin/tours" className="text-cyan-400 font-bold text-sm hover:text-cyan-300">
+        <Link href="/admin/itineraries" className="text-cyan-400 font-bold text-sm hover:text-cyan-300">
           ← Tours
         </Link>
         <h1 className="text-lg font-black">New Tour</h1>
@@ -53,7 +53,7 @@ export default async function NewTourPage() {
             Create Tour
           </button>
           <Link
-            href="/admin/tours"
+            href="/admin/itineraries"
             className="bg-slate-700 hover:bg-slate-600 text-white font-bold px-8 py-3 rounded-xl transition-colors"
           >
             Cancel

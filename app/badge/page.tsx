@@ -96,12 +96,20 @@ export default async function BadgePage() {
         No sticker yet? No problem. This screen is your badge.
       </div>
 
-      <Link
-        href="/"
-        className="mt-5 text-white/70 font-black text-sm hover:text-white transition-colors underline underline-offset-2"
-      >
-        Back to SamuiKids.com
-      </Link>
+      <div className="mt-5 flex items-center gap-4">
+        <Link
+          href="/member"
+          className="text-white font-black text-sm bg-white/20 hover:bg-white/30 px-4 py-2 rounded-xl transition-colors"
+        >
+          My Itineraries
+        </Link>
+        <Link
+          href="/"
+          className="text-white/60 font-bold text-sm hover:text-white transition-colors"
+        >
+          Home
+        </Link>
+      </div>
     </div>
   );
 }

@@ -21,8 +21,8 @@ export default async function AdminPage() {
           <p className="text-slate-400 text-xs mt-0.5">{activities.length} total activities</p>
         </div>
         <div className="flex items-center gap-3">
-          <Link href="/admin/tours" className="text-cyan-400 text-sm font-bold hover:text-cyan-300">
-            Tours
+          <Link href="/admin/itineraries" className="text-cyan-400 text-sm font-bold hover:text-cyan-300">
+            Itineraries
           </Link>
           <Link href="/" target="_blank" className="text-cyan-400 text-sm font-bold hover:text-cyan-300">
             View Site

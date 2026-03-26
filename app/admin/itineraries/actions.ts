@@ -29,7 +29,7 @@ export async function createTour(formData: FormData) {
     .single();
 
   if (error) throw new Error(error.message);
-  redirect(`/admin/tours/${data.id}`);
+  redirect(`/admin/itineraries/${data.id}`);
 }
 
 export async function updateTour(id: string, formData: FormData) {
@@ -45,12 +45,12 @@ export async function updateTour(id: string, formData: FormData) {
     .eq("id", id);
 
   if (error) throw new Error(error.message);
-  redirect(`/admin/tours/${id}`);
+  redirect(`/admin/itineraries/${id}`);
 }
 
 export async function deleteTour(id: string) {
   await supabaseAdmin.from("tours").delete().eq("id", id);
-  redirect("/admin/tours");
+  redirect("/admin/itineraries");
 }
 
 export async function addTourStop(formData: FormData) {
@@ -64,10 +64,10 @@ export async function addTourStop(formData: FormData) {
     .insert({ tour_id: tourId, activity_slug: activitySlug, stop_number: stopNumber, stop_note: stopNote });
 
   if (error) throw new Error(error.message);
-  redirect(`/admin/tours/${tourId}`);
+  redirect(`/admin/itineraries/${tourId}`);
 }
 
 export async function removeTourStop(stopId: string, tourId: string) {
   await supabaseAdmin.from("tour_stops").delete().eq("id", stopId);
-  redirect(`/admin/tours/${tourId}`);
+  redirect(`/admin/itineraries/${tourId}`);
 }

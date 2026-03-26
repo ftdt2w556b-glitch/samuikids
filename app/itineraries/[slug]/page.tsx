@@ -37,8 +37,8 @@ export default async function TourDetailPage({
 
       {/* Header */}
       <div className="mb-10">
-        <Link href="/tours" className="text-cyan-600 font-bold text-sm hover:text-cyan-700 mb-4 inline-block">
-          ← All Tours
+        <Link href="/itineraries" className="text-cyan-600 font-bold text-sm hover:text-cyan-700 mb-4 inline-block">
+          ← Itineraries
         </Link>
         <h1 className="text-4xl font-black text-gray-900 mb-2">{tour.title}</h1>
         <div className="flex flex-wrap gap-3 mb-4">
@@ -136,7 +136,7 @@ export default async function TourDetailPage({
           href="/join"
           className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg"
         >
-          Get Your Member Badge for Discounts
+          Get Your Member Badge
         </Link>
         <p className="text-gray-400 text-xs mt-3">
           Free forever. Show the badge at every stop for your member discount.
