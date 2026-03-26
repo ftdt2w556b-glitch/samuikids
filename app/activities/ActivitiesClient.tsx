@@ -41,7 +41,7 @@ export default function ActivitiesClient({
     initialPrice ? [initialPrice] : []
   );
   const [audience, setAudience] = useState<Audience | "all">(initialAudience ?? "all");
-  const [sortBy, setSortBy] = useState<"popularity" | "price-low" | "price-high">("popularity");
+  const [sortBy, setSortBy] = useState<"az" | "price-low" | "price-high">("az");
   const [showFilters, setShowFilters] = useState(
     !!(initialCategory || initialAge || initialPrice)
   );
@@ -68,6 +68,13 @@ export default function ActivitiesClient({
       result = [...result].sort(
         (a, b) => PRICE_ORDER.indexOf(b.priceRange) - PRICE_ORDER.indexOf(a.priceRange)
       );
+    } else {
+      // A-Z, featured first
+      result = [...result].sort((a, b) => {
+        if (a.featured && !b.featured) return -1;
+        if (!a.featured && b.featured) return 1;
+        return a.title.localeCompare(b.title);
+      });
     }
 
     return result;
@@ -124,9 +131,9 @@ export default function ActivitiesClient({
       {/* Audience tabs */}
       <div className="flex gap-2 mb-6">
         {([
-          { value: "all",    label: "All Activities" },
-          { value: "kids",   label: "Just for Kids" },
-          { value: "family", label: "Family Adventures" },
+          { value: "all",    label: "All" },
+          { value: "kids",   label: "Drop-off Supervised" },
+          { value: "family", label: "Family (you join in)" },
         ] as { value: Audience | "all"; label: string }[]).map(({ value, label }) => (
           <button
             key={value}
@@ -165,7 +172,7 @@ export default function ActivitiesClient({
           onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
           className="border border-gray-200 rounded-2xl px-4 py-3 text-sm text-gray-700 bg-white shadow-sm outline-none focus:ring-2 focus:ring-cyan-400 font-semibold"
         >
-          <option value="popularity">Sort: Popular</option>
+          <option value="az">Sort: Featured + A-Z</option>
           <option value="price-low">Sort: Price Low</option>
           <option value="price-high">Sort: Price High</option>
         </select>

@@ -48,10 +48,10 @@ export async function updateActivity(slug: string, formData: FormData) {
     has_drinks:        formData.get("has_drinks")       === "on",
     all_day_option:    formData.get("all_day_option")   === "on",
     legally_registered: formData.get("legally_registered") === "on",
+    booking_required:  formData.get("booking_required")  === "on",
     session_type:      formData.get("session_type")     as string || null,
     age_min:           formData.get("age_min")          ? Number(formData.get("age_min"))  : null,
     age_max:           formData.get("age_max")          ? Number(formData.get("age_max"))  : null,
-    popularity:        formData.get("popularity")       ? Number(formData.get("popularity")) : 5,
   };
 
   const { error } = await supabaseAdmin

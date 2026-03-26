@@ -31,7 +31,7 @@ export interface Activity {
   website?: string;
   phone?: string;
   featured: boolean;
-  popularity: number; // 1-10
+  bookingRequired?: boolean;
   audience: Audience;
   dropOff?: boolean;
   memberDiscount?: boolean;

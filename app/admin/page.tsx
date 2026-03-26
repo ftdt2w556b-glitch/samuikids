@@ -35,7 +35,7 @@ export default async function AdminPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {[
             { label: "Total",         value: activities.length,                        color: "bg-slate-700" },
-            { label: "Just for Kids", value: kids.length,                              color: "bg-emerald-900" },
+            { label: "Drop-off",      value: kids.length,                              color: "bg-emerald-900" },
             { label: "Family",        value: family.length,                            color: "bg-blue-900"   },
             { label: "Featured",      value: activities.filter(a => a.featured).length, color: "bg-orange-900" },
           ].map(({ label, value, color }) => (

@@ -26,7 +26,7 @@ function mapRow(r: any): Activity {
     website:           r.website           ?? undefined,
     phone:             r.phone             ?? undefined,
     featured:          r.featured          ?? false,
-    popularity:        r.popularity        ?? 5,
+    bookingRequired:   r.booking_required  ?? false,
     audience:          r.audience          as Audience,
     dropOff:           r.drop_off          ?? undefined,
     memberDiscount:    r.member_discount   ?? undefined,
@@ -46,7 +46,7 @@ export async function getAllActivities(): Promise<Activity[]> {
   const { data, error } = await supabaseAdmin
     .from("activities")
     .select("*")
-    .order("popularity", { ascending: false });
+    .order("featured", { ascending: false }).order("title", { ascending: true });
 
   if (error) throw new Error(`getAllActivities: ${error.message}`);
   return (data ?? []).map(mapRow);
@@ -68,7 +68,7 @@ export async function getFeaturedActivities(): Promise<Activity[]> {
     .from("activities")
     .select("*")
     .eq("featured", true)
-    .order("popularity", { ascending: false });
+    .order("featured", { ascending: false }).order("title", { ascending: true });
 
   if (error) throw new Error(`getFeaturedActivities: ${error.message}`);
   return (data ?? []).map(mapRow);
@@ -79,7 +79,7 @@ export async function getKidActivities(): Promise<Activity[]> {
     .from("activities")
     .select("*")
     .eq("audience", "kids")
-    .order("popularity", { ascending: false });
+    .order("featured", { ascending: false }).order("title", { ascending: true });
 
   if (error) throw new Error(`getKidActivities: ${error.message}`);
   return (data ?? []).map(mapRow);
@@ -90,7 +90,7 @@ export async function getFamilyActivities(): Promise<Activity[]> {
     .from("activities")
     .select("*")
     .eq("audience", "family")
-    .order("popularity", { ascending: false });
+    .order("featured", { ascending: false }).order("title", { ascending: true });
 
   if (error) throw new Error(`getFamilyActivities: ${error.message}`);
   return (data ?? []).map(mapRow);

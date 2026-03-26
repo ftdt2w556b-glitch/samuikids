@@ -107,24 +107,25 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* JUST FOR KIDS */}
-      <section className="bg-gradient-to-b from-sky-50 to-white py-12">
+      {/* DROP-OFF SUPERVISED — primary focus */}
+      <section className="bg-gradient-to-b from-emerald-50 to-white py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 flex-shrink-0">
-                <Image src="/images/samuikidsshopping.png" alt="" fill className="object-contain" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-black text-gray-900">Just for Kids</h2>
-                <p className="text-gray-500 text-sm mt-0.5">Supervised spots with staff, drop-off friendly</p>
+          {/* Section header callout */}
+          <div className="bg-emerald-500 text-white rounded-2xl px-5 py-4 mb-6 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div className="flex-1">
+              <div className="font-black text-lg leading-tight">Drop-off Supervised Activities</div>
+              <div className="text-emerald-100 text-sm font-semibold mt-0.5">
+                Leave your kids with trained staff. These spots are built for children and run without you.
               </div>
             </div>
-            <Link href="/activities?audience=kids" className="text-cyan-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap">
-              View all <ChevronRight size={16} />
+            <Link
+              href="/activities?audience=kids"
+              className="shrink-0 bg-white text-emerald-600 font-black text-sm px-5 py-2 rounded-xl hover:bg-emerald-50 transition-colors whitespace-nowrap"
+            >
+              See all drop-off spots <ChevronRight size={14} className="inline" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {kidActivities.map((activity) => (
               <ActivityCard key={activity.slug} activity={activity} />
             ))}
@@ -132,24 +133,19 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* FAMILY ADVENTURES */}
-      <section className="bg-white py-12 border-t border-gray-100">
+      {/* FAMILY ACTIVITIES — clearly secondary */}
+      <section className="bg-white py-12 border-t-4 border-gray-100">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 flex-shrink-0">
-                <Image src="/images/samuikidsfamily2.png" alt="" fill className="object-contain" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-black text-gray-900">Family Adventures</h2>
-                <p className="text-gray-500 text-sm mt-0.5">Experiences the whole family will love together</p>
-              </div>
+          <div className="flex items-center justify-between mb-1">
+            <div>
+              <h2 className="text-xl font-black text-gray-700">Family Activities</h2>
+              <p className="text-gray-400 text-sm mt-0.5 font-semibold">Parents join in — great for the whole family together</p>
             </div>
-            <Link href="/activities?audience=family" className="text-cyan-600 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap">
+            <Link href="/activities?audience=family" className="text-blue-500 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap">
               View all <ChevronRight size={16} />
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
             {familyActivities.map((activity) => (
               <ActivityCard key={activity.slug} activity={activity} />
             ))}

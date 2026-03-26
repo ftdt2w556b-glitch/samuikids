@@ -17,7 +17,8 @@ const AGE_SHORT: Record<AgeGroup, string> = {
 
 export default function ActivityCard({ activity }: Props) {
   const hasPhoto = activity.photos[0] && !activity.photos[0].includes("placeholder");
-  const showDropOff = activity.dropOff || activity.audience === "kids";
+  const isDropOff = activity.audience === "kids" || activity.dropOff;
+  const isFamily = activity.audience === "family";
   const ageLabel = activity.ageMin != null && activity.ageMax != null
     ? `Ages ${activity.ageMin}–${activity.ageMax}`
     : null;
@@ -43,10 +44,15 @@ export default function ActivityCard({ activity }: Props) {
             {PRICE_LABELS[activity.priceRange]}
           </span>
 
-          {/* Drop-off badge — top left */}
-          {showDropOff && (
-            <span className="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-black px-2 py-1 rounded-full">
-              Drop-off
+          {/* Audience badge — top left */}
+          {isDropOff && (
+            <span className="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-black px-2.5 py-1 rounded-full shadow-sm">
+              Drop-off OK
+            </span>
+          )}
+          {isFamily && (
+            <span className="absolute top-3 left-3 bg-blue-500 text-white text-xs font-black px-2.5 py-1 rounded-full shadow-sm">
+              Family Activity
             </span>
           )}
 

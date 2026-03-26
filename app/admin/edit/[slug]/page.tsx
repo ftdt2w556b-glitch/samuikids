@@ -71,10 +71,6 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
                 <option value="family" className="bg-slate-800">Family</option>
               </select>
             </div>
-            <div>
-              <label className={labelClass}>Popularity (1-10)</label>
-              <input name="popularity" type="number" min="1" max="10" defaultValue={a.popularity} className={fieldClass} />
-            </div>
           </div>
 
           <div>
@@ -153,6 +149,7 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
               { name: "has_food",           label: "Has Food",         val: a.hasFood           },
               { name: "has_drinks",         label: "Has Drinks",       val: a.hasDrinks         },
               { name: "all_day_option",     label: "All-day Option",   val: a.allDayOption      },
+              { name: "booking_required",   label: "Booking Required", val: a.bookingRequired   },
               { name: "legally_registered", label: "Legally Registered", val: a.legallyRegistered ?? true },
             ].map(({ name, label, val }) => (
               <label key={name} className="flex items-center gap-2 cursor-pointer text-slate-300 text-sm font-semibold">
