@@ -56,9 +56,9 @@ export default async function JoinPage() {
       </div>
 
       {/* Drop-off rule notice */}
-      <div className="mt-6 bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-4 max-w-sm text-center">
-        <p className="text-white font-black text-xs uppercase tracking-wide mb-1">Drop-off Policy</p>
-        <p className="text-white/80 text-xs leading-relaxed">
+      <div className="mt-6 bg-slate-900/80 backdrop-blur-sm rounded-2xl px-5 py-4 max-w-sm text-center">
+        <p className="text-orange-400 font-black text-xs uppercase tracking-wide mb-1">Drop-off Policy</p>
+        <p className="text-slate-300 text-xs leading-relaxed">
           Children must be toilet-trained and able to use the restroom independently to be left without a parent or guardian at any drop-off supervised activity.
         </p>
       </div>
