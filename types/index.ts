@@ -47,4 +47,5 @@ export interface Activity {
   airConditioned?: boolean;
   indoor?: boolean;
   nannyWelcome?: boolean;
+  memberOffer?: string;
 }

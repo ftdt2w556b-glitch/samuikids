@@ -54,6 +54,7 @@ export async function updateActivity(slug: string, formData: FormData) {
     session_type:      formData.get("session_type")     as string || null,
     age_min:           formData.get("age_min")          ? Number(formData.get("age_min"))  : null,
     age_max:           formData.get("age_max")          ? Number(formData.get("age_max"))  : null,
+    member_offer:      formData.get("member_offer")     as string || null,
   };
 
   const { error } = await supabaseAdmin

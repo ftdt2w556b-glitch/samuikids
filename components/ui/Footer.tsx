@@ -13,22 +13,16 @@ export default function Footer() {
             </div>
             <div>
               <span className="block font-black text-cyan-400">Samui Kids</span>
-              <span className="block text-[10px] font-bold text-orange-400 uppercase tracking-wide">Fun Guide</span>
+              <span className="block text-[10px] font-bold text-orange-400 uppercase tracking-wide">Drop-off Guide</span>
             </div>
           </div>
           <p className="text-slate-400 text-sm leading-relaxed">
-            The best guide to family-friendly activities on Koh Samui, Thailand. Updated regularly with new adventures.
+            The drop-off guide for supervised kid activities on Koh Samui, Thailand.
           </p>
           <div className="flex gap-3 mt-4">
-            <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-bold">
-              Instagram
-            </a>
-            <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-bold">
-              Facebook
-            </a>
-            <a href="mailto:hello@samuikids.com" className="text-slate-400 hover:text-cyan-400 transition-colors">
-              <Mail size={18} />
-            </a>
+            <Link href="/about#contact" className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1.5 text-sm font-bold">
+              <Mail size={16} /> Contact
+            </Link>
           </div>
         </div>
 
@@ -43,17 +37,22 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/activities?category=water-beaches" className="hover:text-cyan-400 transition-colors">
-                Water & Beaches
+                Water &amp; Beaches
               </Link>
             </li>
             <li>
               <Link href="/activities?category=nature-animals" className="hover:text-cyan-400 transition-colors">
-                Nature & Animals
+                Nature &amp; Animals
               </Link>
             </li>
             <li>
               <Link href="/activities?category=adventure-sports" className="hover:text-cyan-400 transition-colors">
-                Adventure & Sports
+                Adventure &amp; Sports
+              </Link>
+            </li>
+            <li>
+              <Link href="/tours" className="hover:text-cyan-400 transition-colors">
+                Day Tours
               </Link>
             </li>
             <li>
@@ -79,9 +78,14 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a href="mailto:list@samuikids.com" className="hover:text-cyan-400 transition-colors">
+              <Link href="/about#contact" className="hover:text-cyan-400 transition-colors">
                 List Your Activity
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/join" className="hover:text-cyan-400 transition-colors">
+                Member Badge
+              </Link>
             </li>
           </ul>
           <p className="text-slate-500 text-xs mt-6">

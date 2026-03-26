@@ -71,7 +71,7 @@ export default function AboutPage() {
       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8 mb-10 text-white">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="relative w-40 h-40 flex-shrink-0">
-            <Image src="/images/samuikidslogo.png" alt="SamuiKids.com Member Badge" fill className="object-contain drop-shadow-2xl" />
+            <Image src="/images/samuikidsshirtyellow.png" alt="SamuiKids.com Member Badge" fill className="object-contain drop-shadow-2xl" />
           </div>
           <div>
             <h2 className="text-2xl font-black mb-3">The SamuiKids.com Badge</h2>

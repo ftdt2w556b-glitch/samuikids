@@ -42,6 +42,7 @@ function mapRow(r: any): Activity {
     airConditioned:    r.air_conditioned   ?? undefined,
     indoor:            r.indoor            ?? undefined,
     nannyWelcome:      r.nanny_welcome     ?? undefined,
+    memberOffer:       r.member_offer      ?? undefined,
   };
 }
 

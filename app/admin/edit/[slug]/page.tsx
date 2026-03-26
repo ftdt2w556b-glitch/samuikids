@@ -163,6 +163,21 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
           </div>
         </div>
 
+        {/* Member Offer */}
+        <div className="bg-slate-800 rounded-2xl p-6 space-y-4">
+          <h2 className="font-black text-slate-300 text-xs uppercase tracking-widest mb-4">Member Discount Offer</h2>
+          <div>
+            <label className={labelClass}>What discount does this location offer members?</label>
+            <input
+              name="member_offer"
+              defaultValue={a.memberOffer ?? ""}
+              placeholder="e.g. 10% off any session, free water with every drop-off, free intro session"
+              className={fieldClass}
+            />
+            <p className="text-slate-500 text-xs mt-1">Shown on the activity page and included in the listing email to the business.</p>
+          </div>
+        </div>
+
         {/* Actions */}
         <div className="flex gap-3">
           <button type="submit" className="bg-cyan-500 hover:bg-cyan-400 text-white font-black px-8 py-3 rounded-xl transition-colors shadow-lg">

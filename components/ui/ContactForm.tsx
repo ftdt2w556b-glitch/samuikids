@@ -33,7 +33,8 @@ export default function ContactForm() {
   const [bizDropOff, setBizDropOff]   = useState(false);
   const [bizLegal, setBizLegal]       = useState(false);
 
-  const isListing = subject === "List My Business";
+  const isListing    = subject === "List My Business";
+  const isEmployment = subject === "Work at a Listed Location";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -104,6 +105,7 @@ export default function ContactForm() {
         <select value={subject} onChange={(e) => setSubject(e.target.value)} className={inputClass}>
           <option value="" className="bg-slate-800">Select a subject…</option>
           <option value="List My Business" className="bg-slate-800">List My Business</option>
+          <option value="Work at a Listed Location" className="bg-slate-800">Work at a Listed Location</option>
           <option value="Suggest an Activity" className="bg-slate-800">Suggest an Activity</option>
           <option value="Update a Listing" className="bg-slate-800">Update a Listing</option>
           <option value="General Question" className="bg-slate-800">General Question</option>
@@ -204,13 +206,41 @@ export default function ContactForm() {
         </div>
       )}
 
+      {isEmployment && (
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-4">
+          <p className="text-cyan-300 font-black text-sm uppercase tracking-wide">Employment Details</p>
+          <p className="text-slate-400 text-xs leading-relaxed">
+            We pass employment enquiries directly to our listed businesses. Tell us what kind of role you are looking for and we will forward your details to relevant locations.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className={labelClass}>Role / Skills</label>
+              <input type="text" placeholder="e.g. Kids activity instructor, swim coach…" className={inputClass} />
+            </div>
+            <div>
+              <label className={labelClass}>Preferred Area</label>
+              <select className={inputClass}>
+                <option value="" className="bg-slate-800">Any area</option>
+                {["Chaweng","Lamai","Bophut","Maenam","Choeng Mon","Bangrak","Nathon"].map(a => (
+                  <option key={a} value={a} className="bg-slate-800">{a}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div>
         <label className={labelClass}>Message <span className="text-orange-400">*</span></label>
         <textarea
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder={isListing ? "Tell us what makes your business special for kids…" : "Tell us how we can help…"}
+          placeholder={
+            isListing    ? "Tell us what makes your business special for kids…" :
+            isEmployment ? "Tell us about your experience working with children, languages spoken, and availability…" :
+            "Tell us how we can help…"
+          }
           rows={4}
           className={`${inputClass} resize-none`}
         />
