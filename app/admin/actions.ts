@@ -57,6 +57,12 @@ export async function updateActivity(slug: string, formData: FormData) {
     member_offer:      formData.get("member_offer")     as string || null,
   };
 
+  // Update primary image if a new one was selected
+  const primaryImage = formData.get("primary_image") as string;
+  if (primaryImage) {
+    (row as Record<string, unknown>).photos = [primaryImage];
+  }
+
   const { error } = await supabaseAdmin
     .from("activities")
     .update(row)
