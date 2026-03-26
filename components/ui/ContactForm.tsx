@@ -38,7 +38,7 @@ export default function ContactForm() {
         setMessage("");
       }
     } catch {
-      setErrorMsg("Network error — please check your connection and try again.");
+      setErrorMsg("Network error. Please check your connection and try again.");
       setStatus("error");
     }
   };
@@ -49,7 +49,7 @@ export default function ContactForm() {
         <CheckCircle size={52} className="text-green-400 mb-4" />
         <h3 className="text-xl font-black text-white mb-2">Message Sent!</h3>
         <p className="text-slate-400 mb-6">
-          Thanks for reaching out — we&apos;ll get back to you soon.
+          Thanks for reaching out. We&apos;ll get back to you soon.
         </p>
         <button
           onClick={() => setStatus("idle")}

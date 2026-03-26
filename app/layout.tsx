@@ -12,7 +12,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: {
-    default: "Samui Kids Fun Guide — Family Activities on Koh Samui",
+    default: "Samui Kids Fun Guide: Family Activities on Koh Samui",
     template: "%s | Samui Kids Fun Guide",
   },
   description:
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://samuikids.com",
     siteName: "Samui Kids Fun Guide",
-    title: "Samui Kids Fun Guide — Family Activities on Koh Samui",
+    title: "Samui Kids Fun Guide: Family Activities on Koh Samui",
     description: "The complete guide to kid-friendly activities on Koh Samui, Thailand.",
   },
 };
