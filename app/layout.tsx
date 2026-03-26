@@ -12,25 +12,25 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: {
-    default: "Samui Kids Fun Guide: Family Activities on Koh Samui",
-    template: "%s | Samui Kids Fun Guide",
+    default: "SamuiKids.com — Kids Activities on Koh Samui",
+    template: "%s | SamuiKids.com",
   },
   description:
-    "Discover the best kid-friendly and family activities on Koh Samui, Thailand. From elephant sanctuaries and water parks to cooking classes and beach adventures.",
+    "The drop-off guide for supervised kids activities on Koh Samui, Thailand. Every listing is built for children, fully supervised, and offers member discounts.",
   keywords: [
-    "family activities Koh Samui",
+    "kids activities Koh Samui",
+    "drop-off supervised kids Koh Samui",
     "things to do with kids Koh Samui",
-    "kid friendly Koh Samui",
-    "Samui family guide",
-    "children activities Koh Samui",
+    "family activities Koh Samui",
+    "children activities Samui Thailand",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://samuikids.com",
     siteName: "SamuiKids.com",
-    title: "SamuiKids.com — Drop-off Supervised Kids Activities on Koh Samui",
-    description: "The drop-off guide for supervised kid activities on Koh Samui, Thailand. Every listing is built for children.",
+    title: "SamuiKids.com — Kids Activities on Koh Samui",
+    description: "The drop-off guide for supervised kids activities on Koh Samui, Thailand. Every listing is built for children, fully supervised, and offers member discounts.",
     images: [
       {
         url: "https://samuikids.com/images/samuikidsog.png",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SamuiKids.com — Drop-off Supervised Kids Activities on Koh Samui",
-    description: "The drop-off guide for supervised kid activities on Koh Samui, Thailand.",
+    title: "SamuiKids.com — Kids Activities on Koh Samui",
+    description: "The drop-off guide for supervised kids activities on Koh Samui, Thailand. Every listing is built for children, fully supervised, and offers member discounts.",
     images: ["https://samuikids.com/images/samuikidsog.png"],
   },
 };
