@@ -10,7 +10,8 @@ import { Category } from "@/types";
 
 export default function HomePage() {
   const featured = getFeaturedActivities();
-  const totalCount = getAllActivities().length;
+  const allActivities = getAllActivities();
+  const totalCount = allActivities.length;
   const kidActivities = getKidActivities().slice(0, 6);
   const familyActivities = getFamilyActivities().slice(0, 3);
 
@@ -38,9 +39,19 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 py-10 pb-16 w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          {/* Logo — first in DOM so mobile shows it at top, centred */}
-          <div className="flex-shrink-0 relative w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72 drop-shadow-2xl mx-auto md:mx-0">
+        <div className="relative max-w-6xl mx-auto px-6 py-10 pb-16 w-full flex flex-col md:flex-row items-center gap-6 md:gap-12">
+          {/* Text — order-1 on mobile (top), order-2 on desktop (right) */}
+          <div className="order-1 md:order-2 flex-1 text-center md:text-left min-w-0">
+            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-3">
+              <MapPin size={14} />
+              Koh Samui, Thailand
+            </div>
+            <RotatingHero />
+            <HeroSearch />
+          </div>
+
+          {/* Logo — order-2 on mobile (below text, smaller), order-1 on desktop (left, larger) */}
+          <div className="order-2 md:order-1 flex-shrink-0 relative w-40 h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 drop-shadow-2xl mx-auto md:mx-0">
             <Image
               src="/images/samuikidslogo.png"
               alt="Samui Kids Fun Guide"
@@ -48,16 +59,6 @@ export default function HomePage() {
               className="object-contain"
               priority
             />
-          </div>
-
-          {/* Text — centred on mobile, left-aligned on desktop */}
-          <div className="flex-1 text-center md:text-left min-w-0">
-            <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm rounded-full px-4 py-1.5 text-white font-bold text-sm mb-3">
-              <MapPin size={14} />
-              Koh Samui, Thailand
-            </div>
-            <RotatingHero />
-            <HeroSearch />
           </div>
         </div>
       </section>
@@ -85,36 +86,36 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-2xl font-black text-gray-900 mb-2">Browse by Category</h2>
         <p className="text-gray-500 mb-6">What kind of adventure are you looking for?</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-          {categories.map(({ key, image, color }) => (
-            <Link
-              key={key}
-              href={`/activities?category=${key}`}
-              className={`group bg-gradient-to-br ${color} rounded-2xl overflow-hidden flex flex-col items-center justify-end text-center hover:scale-105 transition-transform shadow-sm hover:shadow-md min-h-[110px] relative pt-2`}
-            >
-              {image ? (
-                <div className="relative w-full h-16 flex-shrink-0">
-                  <Image
-                    src={image}
-                    alt={CATEGORY_LABELS[key]}
-                    fill
-                    className="object-contain"
-                    style={{ mixBlendMode: "screen" }}
-                    sizes="120px"
-                  />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-3">
+          {categories.map(({ key, image, color }) => {
+            const count = allActivities.filter((a) => a.category === key).length;
+            return (
+              <Link
+                key={key}
+                href={`/activities?category=${key}`}
+                className={`group bg-gradient-to-br ${color} rounded-2xl overflow-hidden flex flex-col items-center justify-end text-center hover:scale-105 transition-transform shadow-sm hover:shadow-md min-h-[110px] relative pt-2`}
+              >
+                {image ? (
+                  <div className="relative w-full h-16 flex-shrink-0">
+                    <Image
+                      src={image}
+                      alt={CATEGORY_LABELS[key]}
+                      fill
+                      className="object-contain"
+                      style={{ mixBlendMode: "screen" }}
+                      sizes="120px"
+                    />
+                  </div>
+                ) : null}
+                <div className="pb-3 px-1">
+                  <span className="text-white font-black text-xs leading-tight drop-shadow-sm block">
+                    {CATEGORY_LABELS[key]}
+                  </span>
+                  <span className="text-white/80 text-[10px] font-bold">{count} spots</span>
                 </div>
-              ) : (
-                <div className="text-3xl h-16 flex items-center justify-center">
-                  {key === "food-cafes" ? "🍜" : "🎮"}
-                </div>
-              )}
-              <div className="pb-3 px-1">
-                <span className="text-white font-black text-xs leading-tight drop-shadow-sm">
-                  {CATEGORY_LABELS[key]}
-                </span>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </section>
 

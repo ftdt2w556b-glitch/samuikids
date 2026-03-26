@@ -34,5 +34,6 @@
   "website": "https://ninjagym.com",
   "featured": true,
   "popularity": 10,
-  "audience": "kids"
+  "audience": "kids",
+  "verified": true
 }

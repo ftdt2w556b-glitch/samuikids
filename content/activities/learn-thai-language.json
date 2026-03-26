@@ -4,20 +4,34 @@
   "shortDesc": "Award-winning language school in Maenam offering structured English classes for children — weekdays 4–6pm and Saturdays.",
   "description": "Koh Samui Language & Vocational School (KSTVS) in Maenam has been recognised three times by Thailand's Ministry of Education as an outstanding school. Children's English classes run at all levels (A1 beginner through C2 advanced) taught by native English speakers. Three terms per year, weekday classes 4–6pm and Saturdays 1–4pm. Summer English Camps combine language learning with supervised trips around the island. A proper school setting — full drop-off.",
   "category": "creative-learning",
-  "tags": ["language", "english", "class", "supervised", "drop-off", "school", "summer camp"],
-  "ageGroups": ["kids", "tweens"],
+  "tags": [
+    "language",
+    "english",
+    "class",
+    "supervised",
+    "drop-off",
+    "school",
+    "summer camp"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens"
+  ],
   "priceRange": "mid",
   "priceNote": "Contact school for term fees. Summer camp pricing available on request.",
   "location": {
-    "lat": 9.5580,
-    "lng": 99.9870,
+    "lat": 9.558,
+    "lng": 99.987,
     "address": "11/8 Moo 1, Maenam",
     "area": "Maenam"
   },
-  "photos": ["/images/samuikidsthailanguageclasses.png"],
+  "photos": [
+    "/images/samuikidsthailanguageclasses.png"
+  ],
   "openingHours": "Weekdays 4–6pm, Sat 1–4pm",
   "website": "https://kstvs.com/english-course-children",
   "featured": true,
   "popularity": 7,
-  "audience": "kids"
+  "audience": "kids",
+  "verified": true
 }

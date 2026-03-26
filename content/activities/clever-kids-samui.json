@@ -4,19 +4,31 @@
   "shortDesc": "Calm, Montessori-inspired indoor play space with wooden toys, gentle music and an outdoor area — perfect for babies to 5-year-olds.",
   "description": "Clever Kids Samui in Maenam is a relaxed, supervised indoor play space designed for very young children. The space features Montessori and wooden toys, a calm atmosphere with gentle music, air-conditioning and a small outdoor area. Ideal for expat families and long-stay visitors looking for a regular drop-off option for babies and toddlers.",
   "category": "entertainment",
-  "tags": ["indoor play", "montessori", "toddler", "baby", "drop-off", "supervised"],
-  "ageGroups": ["toddlers"],
+  "tags": [
+    "indoor play",
+    "montessori",
+    "toddler",
+    "baby",
+    "drop-off",
+    "supervised"
+  ],
+  "ageGroups": [
+    "toddlers"
+  ],
   "priceRange": "budget",
   "priceNote": "~200 THB/hour",
   "location": {
-    "lat": 9.5590,
-    "lng": 99.9880,
+    "lat": 9.559,
+    "lng": 99.988,
     "address": "Maenam",
     "area": "Maenam"
   },
-  "photos": ["/images/samuikidsentertainment3.png"],
+  "photos": [
+    "/images/samuikidsentertainment3.png"
+  ],
   "openingHours": "Mon–Thu & Sat–Sun 9am–7pm. Closed Fridays.",
   "featured": false,
   "popularity": 6,
-  "audience": "kids"
+  "audience": "kids",
+  "verified": true
 }

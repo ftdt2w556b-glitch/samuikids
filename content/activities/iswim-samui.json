@@ -4,20 +4,34 @@
   "shortDesc": "Private mobile swimming lessons at your villa or hotel pool — from babies 6 months old through to school-age children.",
   "description": "iSwim Samui provides private, mobile swimming lessons with an AUSTSWIM-qualified instructor who comes directly to your villa or hotel pool. Programs cover baby and toddler aquatics from 6 months, pre-school swimming (ages 2–3) and learn-to-swim from age 4. Maximum 2 children per session. The instructor is an Autism Swim approved provider and ADHD-sensitive, making this a great option for children with additional needs.",
   "category": "water-beaches",
-  "tags": ["swimming", "lessons", "private", "supervised", "baby", "toddler", "mobile"],
-  "ageGroups": ["toddlers", "kids"],
+  "tags": [
+    "swimming",
+    "lessons",
+    "private",
+    "supervised",
+    "baby",
+    "toddler",
+    "mobile"
+  ],
+  "ageGroups": [
+    "toddlers",
+    "kids"
+  ],
   "priceRange": "mid",
   "priceNote": "Contact info@iswimsamui.com or +66 92 737 9705 for rates",
   "location": {
-    "lat": 9.5400,
-    "lng": 100.0300,
+    "lat": 9.54,
+    "lng": 100.03,
     "address": "Mobile service — NE Koh Samui (Bangrak, Bophut, Chaweng, Choeng Mon, Maenam)",
     "area": "Island-wide"
   },
-  "photos": ["/images/samuikidssnorkel.png"],
+  "photos": [
+    "/images/samuikidssnorkel.png"
+  ],
   "openingHours": "By appointment",
   "website": "https://iswimsamui.com",
   "featured": false,
   "popularity": 7,
-  "audience": "kids"
+  "audience": "kids",
+  "verified": true
 }

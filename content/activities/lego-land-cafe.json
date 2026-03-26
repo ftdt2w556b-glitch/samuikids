@@ -4,20 +4,34 @@
   "shortDesc": "Supervised LEGO-style creative playroom inside Big C Chaweng and Tesco Lotus Lamai — kids build while parents shop next door.",
   "description": "Le Blocks is a real supervised kids playroom with two locations inside major Koh Samui supermarkets. Children build with LEGO-style bricks, create fuse bead art and work with foam clay in a clean, air-conditioned space. Staff supervised so parents can do grocery shopping in the same mall — one of the island's most convenient drop-off options. Walk-ins welcome. Add-on craft kits available.",
   "category": "creative-learning",
-  "tags": ["lego", "building", "creative", "indoor", "supervised", "drop-off", "crafts"],
-  "ageGroups": ["kids", "tweens"],
+  "tags": [
+    "lego",
+    "building",
+    "creative",
+    "indoor",
+    "supervised",
+    "drop-off",
+    "crafts"
+  ],
+  "ageGroups": [
+    "kids",
+    "tweens"
+  ],
   "priceRange": "budget",
   "priceNote": "From 200 THB/hour per child. Adult supervision fee 100 THB. Craft kits 100–250 THB.",
   "location": {
-    "lat": 9.5310,
-    "lng": 100.0610,
+    "lat": 9.531,
+    "lng": 100.061,
     "address": "Big C Chaweng (first floor) & Tesco Lotus Lamai",
     "area": "Chaweng / Lamai"
   },
-  "photos": ["/images/samuikidslego.png"],
+  "photos": [
+    "/images/samuikidslego.png"
+  ],
   "openingHours": "Daily 10am–8pm",
   "website": "https://kohplanner.com/places-to-visit/surat-thani/koh-samui/child-friendly/le-blocks-playroom/",
   "featured": true,
   "popularity": 8,
-  "audience": "kids"
+  "audience": "kids",
+  "verified": true
 }

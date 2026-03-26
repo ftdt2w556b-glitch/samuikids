@@ -2,17 +2,30 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { Menu, X, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, MapPin, Search } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 320);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    window.location.href = `/activities${searchText ? `?search=${encodeURIComponent(searchText)}` : ""}`;
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-cyan-100">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
           <div className="relative w-10 h-10 flex-shrink-0">
             <Image
               src="/images/elephantwithhat.png"
@@ -28,8 +41,27 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* Sticky search — slides in after scrolling past hero */}
+        <form
+          onSubmit={handleSearch}
+          className={`hidden md:flex items-center flex-1 max-w-xs transition-all duration-300 ${
+            scrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"
+          }`}
+        >
+          <div className="flex items-center w-full bg-gray-100 rounded-full px-3 py-1.5 gap-2">
+            <Search size={14} className="text-gray-400 flex-shrink-0" />
+            <input
+              type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              placeholder="Search activities..."
+              className="flex-1 bg-transparent text-sm outline-none text-gray-700 placeholder-gray-400"
+            />
+          </div>
+        </form>
+
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-bold">
+        <nav className="hidden md:flex items-center gap-5 text-sm font-bold flex-shrink-0">
           <Link href="/" className="text-gray-700 hover:text-cyan-600 transition-colors">
             Home
           </Link>
@@ -51,14 +83,25 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile: search icon (when scrolled) + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          {scrolled && (
+            <Link
+              href="/activities"
+              className="p-2 rounded-full bg-gray-100 text-gray-600"
+              aria-label="Search"
+            >
+              <Search size={18} />
+            </Link>
+          )}
+          <button
+            onClick={() => setOpen(!open)}
+            className="p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

@@ -31,6 +31,7 @@ export interface Activity {
   website?: string;
   phone?: string;
   featured: boolean;
+  verified?: boolean;
   popularity: number; // 1-10
   audience: Audience;
 }
