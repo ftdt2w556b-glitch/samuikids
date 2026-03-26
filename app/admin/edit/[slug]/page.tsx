@@ -1,11 +1,11 @@
 import { cookies } from "next/headers";
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { readdirSync } from "fs";
 import { join } from "path";
 import { getActivityBySlug } from "@/lib/activities";
 import { updateActivity } from "../../actions";
+import ImagePicker from "./ImagePicker";
 
 const CATEGORIES = ["nature-animals","water-beaches","creative-learning","adventure-sports","food-cafes","cultural","entertainment"];
 const PRICE_RANGES = ["free","budget","mid","premium"];
@@ -126,54 +126,7 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
             </div>
           </details>
 
-          {/* Current image preview */}
-          {currentImage && (
-            <div className="flex items-center gap-3 mb-4 bg-slate-700/50 rounded-xl p-3">
-              <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-slate-600">
-                <Image src={currentImage} alt="Current" fill className="object-contain p-1" sizes="64px" />
-              </div>
-              <div>
-                <p className="text-slate-300 text-xs font-bold uppercase tracking-wide mb-0.5">Current image</p>
-                <p className="text-slate-400 text-xs font-mono">{currentImage.replace("/images/", "")}</p>
-              </div>
-            </div>
-          )}
-
-          {/* Scrollable grid of all available images */}
-          <div className="overflow-y-auto max-h-72 rounded-xl border border-slate-700 p-3 bg-slate-900/40">
-            <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2">
-              {imageFiles.map((src) => {
-                const isSelected = src === currentImage;
-                return (
-                  <label
-                    key={src}
-                    title={src.replace("/images/", "")}
-                    className={`relative cursor-pointer rounded-lg overflow-hidden aspect-square border-2 transition-all hover:scale-105 ${
-                      isSelected
-                        ? "border-cyan-400 ring-2 ring-cyan-400/50"
-                        : "border-slate-600 hover:border-slate-400"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="primary_image"
-                      value={src}
-                      defaultChecked={isSelected}
-                      className="sr-only"
-                    />
-                    <Image
-                      src={src}
-                      alt={src.replace("/images/", "")}
-                      fill
-                      className="object-contain p-1 bg-slate-700"
-                      sizes="80px"
-                    />
-                  </label>
-                );
-              })}
-            </div>
-          </div>
-          <p className="text-slate-500 text-xs mt-2">{imageFiles.length} images available</p>
+          <ImagePicker imageFiles={imageFiles} currentImage={currentImage} />
         </div>
 
         {/* Location */}
