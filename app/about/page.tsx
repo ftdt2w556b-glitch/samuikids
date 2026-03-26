@@ -53,7 +53,7 @@ export default function AboutPage() {
               color: "from-orange-50 to-amber-50",
               border: "border-orange-200",
               label: "bg-orange-500",
-              desc: "Kid-focused means the entire business was designed around children as the main customer. Not a cafe with a kids menu. Not a beach club with a shallow end. Think: a gym built around obstacle courses and ninja training. A cafe that exists because of LEGO. A studio where every class, space and staff member exists for the kids.",
+              desc: "Kid-focused means the entire business was designed around children as the main customer. Not a cafe with a kids menu. Not a beach club with a shallow end. Think: a gym built around obstacle courses and ninja training.",
             },
           ].map(({ icon, title, color, border, label, desc }) => (
             <div key={title} className={`bg-gradient-to-br ${color} border ${border} rounded-3xl p-6`}>
@@ -114,10 +114,10 @@ export default function AboutPage() {
         </div>
         <div className="space-y-3 text-gray-600 leading-relaxed text-base">
           <p>
-            Every business listed on SamuiKids.com is legally registered in Thailand. We verify this before any listing goes live. No exceptions.
+            Every business listed on SamuiKids.com is legally registered in Thailand.
           </p>
           <p>
-            This matters for two reasons. First, it protects families. Legally registered businesses are accountable, insured, and operating within Thai law. Second, it protects the island. Thailand takes digital business listings seriously, and we are proud to support the local economy by listing only businesses that play by the rules.
+            This matters for two reasons. First, it protects families. Legally registered businesses are operating within Thai law. Second, it protects the island. Thailand takes digital business listings seriously, and we are proud to support the local economy by listing only businesses that play by the rules.
           </p>
           <p className="text-cyan-700 font-semibold">
             If you want to list your business, you will be asked to confirm your legal registration as part of the process.
@@ -148,7 +148,7 @@ export default function AboutPage() {
           href="/activities"
           className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg text-lg"
         >
-          <span className="relative w-8 h-8 flex-shrink-0">
+          <span className="relative w-12 h-12 flex-shrink-0">
             <Image src="/images/samuikidsmonkey.png" alt="" fill className="object-contain" />
           </span>
           Find Drop-off Activities
