@@ -94,9 +94,37 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
         {/* Primary Image */}
         <div className="bg-slate-800 rounded-2xl p-6">
           <h2 className="font-black text-slate-300 text-xs uppercase tracking-widest mb-1">Primary Image</h2>
-          <p className="text-slate-500 text-xs mb-4">
-            Click a thumbnail to select it. Add new images by dropping a .png into /public/images/ and redeploying.
+          <p className="text-slate-400 text-sm mb-4">
+            Click any image below to select it for this listing.
           </p>
+
+          {/* How to add new images — plain English for non-technical staff */}
+          <details className="mb-5 bg-amber-900/30 border border-amber-700/40 rounded-xl overflow-hidden">
+            <summary className="px-4 py-3 text-amber-300 font-black text-xs uppercase tracking-wide cursor-pointer select-none hover:bg-amber-900/20 transition-colors">
+              How to add a new image to this list
+            </summary>
+            <div className="px-4 pb-4 pt-2 space-y-3 text-slate-300 text-sm leading-relaxed">
+              <p>You do not need to touch any code. Follow these steps from any browser:</p>
+              <ol className="space-y-2.5 list-none">
+                {[
+                  <>Go to <span className="font-black text-white">github.com</span> and sign in. Open the SamuiKids repository.</>,
+                  <>Click into the folders: <span className="font-mono text-amber-300 text-xs bg-black/30 px-1.5 py-0.5 rounded">public</span> → <span className="font-mono text-amber-300 text-xs bg-black/30 px-1.5 py-0.5 rounded">images</span></>,
+                  <>Click <span className="font-black text-white">Add file</span> (top right) → <span className="font-black text-white">Upload files</span>.</>,
+                  <>Drag your <span className="font-black text-white">.png file</span> into the box. Use a simple lowercase filename with no spaces, e.g. <span className="font-mono text-amber-300 text-xs bg-black/30 px-1.5 py-0.5 rounded">samuikidsnewplace.png</span></>,
+                  <>Scroll down and click <span className="font-black text-white">Commit changes</span>. Leave the default message as-is.</>,
+                  <>Wait about <span className="font-black text-white">2 minutes</span> for the site to rebuild automatically. Then come back here and your new image will appear in the grid below.</>,
+                ].map((step, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="w-5 h-5 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="text-slate-500 text-xs border-t border-slate-700 pt-3 mt-3">
+                If something does not look right after 2 minutes, do a hard refresh (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows).
+              </p>
+            </div>
+          </details>
 
           {/* Current image preview */}
           {currentImage && (
