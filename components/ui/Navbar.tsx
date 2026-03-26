@@ -75,10 +75,10 @@ export default function Navbar() {
             About
           </Link>
           <Link
-            href="/activities"
+            href="/badge"
             className="bg-gradient-to-r from-orange-400 to-orange-500 text-white px-4 py-2 rounded-full hover:from-orange-500 hover:to-orange-600 transition-all shadow-sm font-bold"
           >
-            Explore Now
+            Member Badge
           </Link>
         </nav>
 
@@ -115,8 +115,11 @@ export default function Navbar() {
           <Link href="/map" onClick={() => setOpen(false)} className="text-gray-700 py-2 border-b border-gray-100">
             Map View
           </Link>
-          <Link href="/about" onClick={() => setOpen(false)} className="text-gray-700 py-2">
+          <Link href="/about" onClick={() => setOpen(false)} className="text-gray-700 py-2 border-b border-gray-100">
             About
+          </Link>
+          <Link href="/badge" onClick={() => setOpen(false)} className="text-orange-500 font-black py-2">
+            Member Badge
           </Link>
         </div>
       )}

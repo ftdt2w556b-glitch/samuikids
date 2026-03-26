@@ -78,9 +78,15 @@ export default function AboutPage() {
             <p className="text-white/90 leading-relaxed mb-4 text-base">
               The logo you see above is your badge. Every business listed on SamuiKids.com has agreed to offer exclusive discounts to our members. Show your digital membership badge, wear the SamuiKids.com shirt, or flash your member card and the discount is yours.
             </p>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <p className="text-white/80 text-sm leading-relaxed mb-4">
               We personally visit and verify every location before it goes live. If a business stops meeting our three standards, it comes off the list. Simple.
             </p>
+            <Link
+              href="/badge"
+              className="inline-block bg-white text-cyan-700 font-black px-6 py-2.5 rounded-full text-sm hover:bg-cyan-50 transition-colors shadow-md"
+            >
+              View Your Digital Badge
+            </Link>
           </div>
         </div>
       </div>
