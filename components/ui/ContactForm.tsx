@@ -25,6 +25,7 @@ export default function ContactForm() {
   const [bizEnglish, setBizEnglish]   = useState(false);
   const [bizPrivate, setBizPrivate]   = useState(false);
   const [bizGroup, setBizGroup]       = useState(false);
+  const [bizBoth, setBizBoth]         = useState(false);
   const [bizHourly, setBizHourly]     = useState(false);
   const [bizHalfDay, setBizHalfDay]   = useState(false);
   const [bizFullDay, setBizFullDay]   = useState(false);
@@ -32,6 +33,7 @@ export default function ContactForm() {
   const [bizDrinks, setBizDrinks]     = useState(false);
   const [bizDropOff, setBizDropOff]   = useState(false);
   const [bizLegal, setBizLegal]       = useState(false);
+  const [bizOffer, setBizOffer]       = useState("");
 
   const isListing    = subject === "List My Business";
   const isEmployment = subject === "Work at a Listed Location";
@@ -47,12 +49,13 @@ export default function ContactForm() {
       website: bizWebsite,
       ageRange: bizAgeRange,
       englishSpoken: bizEnglish,
-      sessionTypes: [bizPrivate && "Private", bizGroup && "Group"].filter(Boolean).join(", "),
+      sessionTypes: [bizPrivate && "Private", bizGroup && "Group", bizBoth && "Both"].filter(Boolean).join(", "),
       sessionLengths: [bizHourly && "Hourly", bizHalfDay && "Half-day", bizFullDay && "Full day"].filter(Boolean).join(", "),
       hasFood: bizFood,
       hasDrinks: bizDrinks,
       dropOff: bizDropOff,
       legallyRegistered: bizLegal,
+      memberOffer: bizOffer,
     } : null;
 
     try {
@@ -151,6 +154,7 @@ export default function ContactForm() {
                 {[
                   { label: "Private (1-on-1)", val: bizPrivate, set: setBizPrivate },
                   { label: "Group (mixed kids)", val: bizGroup, set: setBizGroup },
+                  { label: "Both", val: bizBoth, set: setBizBoth },
                 ].map(({ label, val, set }) => (
                   <label key={label} className="flex items-center gap-2 cursor-pointer text-slate-300 text-sm font-semibold">
                     <input type="checkbox" checked={val} onChange={(e) => set(e.target.checked)} className="w-4 h-4 rounded accent-cyan-400" />
@@ -192,6 +196,21 @@ export default function ContactForm() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-4 space-y-2">
+            <p className="text-cyan-300 font-black text-xs uppercase tracking-wide">Member Offer <span className="text-orange-400">*</span></p>
+            <p className="text-slate-400 text-xs leading-relaxed">
+              All SamuiKids.com listings provide a free offer to members. This could be a free water with every session, 10% off any purchase, a free intro class, or similar. What will your offer be?
+            </p>
+            <input
+              type="text"
+              required={isListing}
+              value={bizOffer}
+              onChange={(e) => setBizOffer(e.target.value)}
+              placeholder="e.g. Free water with every drop-off session"
+              className={inputClass}
+            />
           </div>
 
           <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-4">
