@@ -36,9 +36,9 @@ export default function HomePage() {
         </div>
 
         {/* Centered content */}
-        <div className="relative max-w-xl mx-auto px-5 pt-8 pb-10 text-center">
+        <div className="relative max-w-xl mx-auto px-5 pt-4 pb-8 text-center">
           {/* Logo — prominent at top center */}
-          <div className="relative w-52 h-52 sm:w-60 sm:h-60 mx-auto mb-3 drop-shadow-2xl">
+          <div className="relative w-60 h-60 sm:w-72 sm:h-72 mx-auto mb-1 drop-shadow-2xl">
             <Image src="/images/samuikidslogo.png" alt="Samui Kids Fun Guide" fill className="object-contain" priority />
           </div>
 
@@ -55,19 +55,19 @@ export default function HomePage() {
           <HeroSearch />
 
           {/* Stats cards inside hero */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
             {[
               { icon: "/images/samuikidsninja.png",   label: `${totalCount}+ Activities`, sub: "Verified" },
               { icon: "/images/samuikidsfamily2.png",  label: "All Ages",                  sub: "Toddlers to teens" },
               { icon: "/images/samuikidsmap.png",      label: "Interactive Map",            sub: "Find nearby" },
               { icon: "/images/samuikidssquirel.png",  label: "Free to Use",               sub: "No account needed" },
             ].map(({ icon, label, sub }) => (
-              <div key={label} className="bg-white/25 backdrop-blur-sm rounded-2xl px-3 py-3 flex flex-col items-center gap-1.5 border border-white/30">
-                <div className="relative w-9 h-9 flex-shrink-0">
-                  <Image src={icon} alt={label} fill className="object-contain" sizes="36px" />
+              <div key={label} className="bg-white/30 backdrop-blur-sm rounded-2xl px-3 py-4 flex flex-col items-center gap-2 border border-white/40">
+                <div className="relative w-12 h-12 flex-shrink-0">
+                  <Image src={icon} alt={label} fill className="object-contain" sizes="48px" />
                 </div>
-                <div className="text-white font-black text-xs leading-tight text-center">{label}</div>
-                <div className="text-white/80 text-[10px] font-semibold text-center">{sub}</div>
+                <div className="text-white font-black text-sm leading-tight text-center">{label}</div>
+                <div className="text-white/90 text-xs font-semibold text-center">{sub}</div>
               </div>
             ))}
           </div>
