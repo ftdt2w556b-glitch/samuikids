@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Interactive map of all kid-friendly activities on Koh Samui. Find activities near your hotel.",
 };
 
-export default function MapPage() {
-  const activities = getAllActivities();
+export default async function MapPage() {
+  const activities = await getAllActivities();
   return <MapClient activities={activities} />;
 }

@@ -15,7 +15,7 @@ interface Props {
 
 export default async function ActivitiesPage({ searchParams }: Props) {
   const params = await searchParams;
-  const activities = getAllActivities();
+  const activities = await getAllActivities();
 
   const initialCategory = params.category as Category | undefined;
   const initialAge = params.age as AgeGroup | undefined;

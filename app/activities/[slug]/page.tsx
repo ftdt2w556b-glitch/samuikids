@@ -18,12 +18,13 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAllActivities().map((a) => ({ slug: a.slug }));
+  const activities = await getAllActivities();
+  return activities.map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const activity = getActivityBySlug(slug);
+  const activity = await getActivityBySlug(slug);
   if (!activity) return {};
   return {
     title: activity.title,
@@ -38,10 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ActivityPage({ params }: Props) {
   const { slug } = await params;
-  const activity = getActivityBySlug(slug);
+  const activity = await getActivityBySlug(slug);
   if (!activity) notFound();
 
-  const allActivities = getAllActivities();
+  const allActivities = await getAllActivities();
   const similar = allActivities
     .filter((a) => a.slug !== activity.slug && a.category === activity.category)
     .slice(0, 3);

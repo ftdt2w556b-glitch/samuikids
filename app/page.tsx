@@ -7,11 +7,11 @@ import ActivityCard from "@/components/activities/ActivityCard";
 import HeroSearch from "@/components/ui/HeroSearch";
 import { Category } from "@/types";
 
-export default function HomePage() {
-  const allActivities = getAllActivities();
+export default async function HomePage() {
+  const allActivities = await getAllActivities();
   const totalCount = allActivities.length;
-  const kidActivities = getKidActivities().slice(0, 6);
-  const familyActivities = getFamilyActivities().slice(0, 3);
+  const kidActivities = (await getKidActivities()).slice(0, 6);
+  const familyActivities = (await getFamilyActivities()).slice(0, 3);
 
   const categories: { key: Category; image: string; color: string }[] = [
     { key: "nature-animals",    image: "/images/elephant.png",               color: "from-green-400 to-green-600"    },
