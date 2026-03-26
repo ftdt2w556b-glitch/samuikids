@@ -1,6 +1,6 @@
 export type AgeGroup = "toddlers" | "kids" | "tweens" | "all-ages";
 export type PriceRange = "free" | "budget" | "mid" | "premium";
-export type Audience = "kids" | "family";
+export type Audience = "kids" | "family" | "both";
 export type Category =
   | "nature-animals"
   | "water-beaches"
@@ -44,4 +44,7 @@ export interface Activity {
   hasFood?: boolean;
   hasDrinks?: boolean;
   legallyRegistered?: boolean;
+  airConditioned?: boolean;
+  indoor?: boolean;
+  nannyWelcome?: boolean;
 }

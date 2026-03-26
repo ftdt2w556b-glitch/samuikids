@@ -56,8 +56,10 @@ export default function ActivitiesClient({
       search,
     });
 
-    if (audience !== "all") {
-      result = result.filter((a) => a.audience === audience);
+    if (audience === "kids") {
+      result = result.filter((a) => a.audience === "kids" || a.audience === "both");
+    } else if (audience === "family") {
+      result = result.filter((a) => a.audience === "family" || a.audience === "both");
     }
 
     if (sortBy === "price-low") {
@@ -129,9 +131,9 @@ export default function ActivitiesClient({
       </div>
 
       {/* Audience tabs */}
-      <div className="flex gap-2 mb-6">
+      <div className="flex gap-2 mb-3 flex-wrap">
         {([
-          { value: "all",    label: "All" },
+          { value: "all",    label: "All Activities" },
           { value: "kids",   label: "Drop-off Supervised" },
           { value: "family", label: "Family (you join in)" },
         ] as { value: Audience | "all"; label: string }[]).map(({ value, label }) => (
@@ -140,7 +142,11 @@ export default function ActivitiesClient({
             onClick={() => setAudience(value)}
             className={`px-4 py-2 rounded-full font-bold text-sm transition-all border ${
               audience === value
-                ? "bg-cyan-500 text-white border-cyan-500 shadow-sm"
+                ? value === "kids"
+                  ? "bg-emerald-500 text-white border-emerald-500 shadow-sm"
+                  : value === "family"
+                  ? "bg-blue-500 text-white border-blue-500 shadow-sm"
+                  : "bg-cyan-500 text-white border-cyan-500 shadow-sm"
                 : "bg-white text-gray-600 border-gray-200 hover:border-cyan-300"
             }`}
           >
@@ -148,6 +154,13 @@ export default function ActivitiesClient({
           </button>
         ))}
       </div>
+
+      {/* Drop-off policy notice */}
+      {audience === "kids" && (
+        <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6 text-sm text-amber-800 font-semibold">
+          <span className="font-black">Drop-off rule:</span> Children must be fully toilet-trained before being left without a parent or guardian. Any child who cannot use the restroom independently requires a parent or nanny to remain on-site.
+        </div>
+      )}
 
       {/* Search + controls */}
       <div className="flex gap-3 mb-6 flex-wrap">
@@ -307,7 +320,11 @@ export default function ActivitiesClient({
       {filtered.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((activity) => (
-            <ActivityCard key={activity.slug} activity={activity} />
+            <ActivityCard
+              key={activity.slug}
+              activity={activity}
+              audienceContext={audience === "kids" ? "dropoff" : audience === "family" ? "family" : undefined}
+            />
           ))}
         </div>
       ) : (

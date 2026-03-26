@@ -67,8 +67,9 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
             <div>
               <label className={labelClass}>Audience</label>
               <select name="audience" defaultValue={a.audience} className={fieldClass}>
-                <option value="kids" className="bg-slate-800">Kids (drop-off)</option>
-                <option value="family" className="bg-slate-800">Family</option>
+                <option value="kids" className="bg-slate-800">Drop-off Supervised</option>
+                <option value="family" className="bg-slate-800">Family (parents join)</option>
+                <option value="both" className="bg-slate-800">Both (drop-off + family)</option>
               </select>
             </div>
           </div>
@@ -142,15 +143,17 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
           <h2 className="font-black text-slate-300 text-xs uppercase tracking-widest mb-4">Features and Badges</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { name: "featured",           label: "Featured",         val: a.featured          },
-              { name: "drop_off",           label: "Drop-off",         val: a.dropOff           },
-              { name: "member_discount",    label: "Member Discount",  val: a.memberDiscount    },
-              { name: "english_spoken",     label: "English Spoken",   val: a.englishSpoken     },
-              { name: "has_food",           label: "Has Food",         val: a.hasFood           },
-              { name: "has_drinks",         label: "Has Drinks",       val: a.hasDrinks         },
-              { name: "all_day_option",     label: "All-day Option",   val: a.allDayOption      },
-              { name: "booking_required",   label: "Booking Required", val: a.bookingRequired   },
-              { name: "legally_registered", label: "Legally Registered", val: a.legallyRegistered ?? true },
+              { name: "featured",           label: "Featured",            val: a.featured               },
+              { name: "member_discount",    label: "Member Discount",     val: a.memberDiscount         },
+              { name: "booking_required",   label: "Booking Required",    val: a.bookingRequired        },
+              { name: "english_spoken",     label: "English Spoken",      val: a.englishSpoken          },
+              { name: "air_conditioned",    label: "Air Conditioned",     val: a.airConditioned         },
+              { name: "indoor",             label: "Indoor",              val: a.indoor                 },
+              { name: "nanny_welcome",      label: "Nanny/Helper Welcome",val: a.nannyWelcome           },
+              { name: "has_food",           label: "Has Food",            val: a.hasFood                },
+              { name: "has_drinks",         label: "Has Drinks",          val: a.hasDrinks              },
+              { name: "all_day_option",     label: "All-day Option",      val: a.allDayOption           },
+              { name: "legally_registered", label: "Legally Registered",  val: a.legallyRegistered ?? true },
             ].map(({ name, label, val }) => (
               <label key={name} className="flex items-center gap-2 cursor-pointer text-slate-300 text-sm font-semibold">
                 <input type="checkbox" name={name} defaultChecked={val ?? false} className={checkClass} />

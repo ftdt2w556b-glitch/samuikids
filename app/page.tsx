@@ -127,7 +127,7 @@ export default async function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {kidActivities.map((activity) => (
-              <ActivityCard key={activity.slug} activity={activity} />
+              <ActivityCard key={activity.slug} activity={activity} audienceContext="dropoff" />
             ))}
           </div>
         </div>
@@ -139,7 +139,7 @@ export default async function HomePage() {
           <div className="flex items-center justify-between mb-1">
             <div>
               <h2 className="text-xl font-black text-gray-700">Family Activities</h2>
-              <p className="text-gray-400 text-sm mt-0.5 font-semibold">Parents join in — great for the whole family together</p>
+              <p className="text-gray-400 text-sm mt-0.5 font-semibold">Parents join in, great for the whole family together</p>
             </div>
             <Link href="/activities?audience=family" className="text-blue-500 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap">
               View all <ChevronRight size={16} />
@@ -147,7 +147,7 @@ export default async function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
             {familyActivities.map((activity) => (
-              <ActivityCard key={activity.slug} activity={activity} />
+              <ActivityCard key={activity.slug} activity={activity} audienceContext="family" />
             ))}
           </div>
         </div>

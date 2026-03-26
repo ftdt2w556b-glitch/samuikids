@@ -39,6 +39,9 @@ function mapRow(r: any): Activity {
     hasFood:           r.has_food          ?? undefined,
     hasDrinks:         r.has_drinks        ?? undefined,
     legallyRegistered: r.legally_registered ?? undefined,
+    airConditioned:    r.air_conditioned   ?? undefined,
+    indoor:            r.indoor            ?? undefined,
+    nannyWelcome:      r.nanny_welcome     ?? undefined,
   };
 }
 
@@ -78,7 +81,7 @@ export async function getKidActivities(): Promise<Activity[]> {
   const { data, error } = await supabaseAdmin
     .from("activities")
     .select("*")
-    .eq("audience", "kids")
+    .in("audience", ["kids", "both"])
     .order("featured", { ascending: false }).order("title", { ascending: true });
 
   if (error) throw new Error(`getKidActivities: ${error.message}`);
@@ -89,7 +92,7 @@ export async function getFamilyActivities(): Promise<Activity[]> {
   const { data, error } = await supabaseAdmin
     .from("activities")
     .select("*")
-    .eq("audience", "family")
+    .in("audience", ["family", "both"])
     .order("featured", { ascending: false }).order("title", { ascending: true });
 
   if (error) throw new Error(`getFamilyActivities: ${error.message}`);

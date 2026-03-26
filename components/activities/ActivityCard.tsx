@@ -6,6 +6,7 @@ import { CATEGORY_LABELS, CATEGORY_COLORS, PRICE_LABELS, PRICE_COLORS } from "@/
 
 interface Props {
   activity: Activity;
+  audienceContext?: "dropoff" | "family";
 }
 
 const AGE_SHORT: Record<AgeGroup, string> = {
@@ -15,10 +16,17 @@ const AGE_SHORT: Record<AgeGroup, string> = {
   "all-ages": "All ages",
 };
 
-export default function ActivityCard({ activity }: Props) {
+export default function ActivityCard({ activity, audienceContext }: Props) {
   const hasPhoto = activity.photos[0] && !activity.photos[0].includes("placeholder");
-  const isDropOff = activity.audience === "kids" || activity.dropOff;
-  const isFamily = activity.audience === "family";
+
+  // "both" activities show context-aware badge; no context = show "Drop-off + Family"
+  const isBothNoContext = activity.audience === "both" && !audienceContext;
+  const isDropOff =
+    activity.audience === "kids" ||
+    (activity.audience === "both" && audienceContext === "dropoff");
+  const isFamily =
+    activity.audience === "family" ||
+    (activity.audience === "both" && audienceContext === "family");
   const ageLabel = activity.ageMin != null && activity.ageMax != null
     ? `Ages ${activity.ageMin}–${activity.ageMax}`
     : null;
@@ -45,6 +53,11 @@ export default function ActivityCard({ activity }: Props) {
           </span>
 
           {/* Audience badge — top left */}
+          {isBothNoContext && (
+            <span className="absolute top-3 left-3 bg-purple-500 text-white text-xs font-black px-2.5 py-1 rounded-full shadow-sm">
+              Drop-off + Family
+            </span>
+          )}
           {isDropOff && (
             <span className="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-black px-2.5 py-1 rounded-full shadow-sm">
               Drop-off OK
