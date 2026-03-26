@@ -10,6 +10,18 @@ import ImagePicker from "./ImagePicker";
 const CATEGORIES = ["nature-animals","water-beaches","creative-learning","adventure-sports","food-cafes","cultural","entertainment"];
 const PRICE_RANGES = ["free","budget","mid","premium"];
 
+// Site UI images that are not listing images — excluded from the image picker.
+// Add to this list any image that is a logo, shirt, favicon, OG/social image, or design file.
+const EXCLUDE_FROM_PICKER = new Set([
+  "samuikidslogo.png",
+  "samuikidsog.jpg",
+  "samuikidsblueshirt.png",
+  "samuikidsshirtpink.png",
+  "samuikidsshirtyellow.png",
+  "elephantorangefavicon.png",
+  "samuikidsappdesignandcolors.PNG",
+]);
+
 export default async function EditActivityPage({ params }: { params: Promise<{ slug: string }> }) {
   const cookieStore = await cookies();
   if (!cookieStore.get("admin_session")) redirect("/admin/login");
@@ -20,7 +32,7 @@ export default async function EditActivityPage({ params }: { params: Promise<{ s
 
   // Read available images from /public/images at build/request time
   const imageFiles = readdirSync(join(process.cwd(), "public/images"))
-    .filter((f) => /\.(png|jpg|jpeg|webp)$/i.test(f))
+    .filter((f) => /\.(png|jpg|jpeg|webp)$/i.test(f) && !EXCLUDE_FROM_PICKER.has(f))
     .sort()
     .map((f) => `/images/${f}`);
 
