@@ -133,19 +133,25 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* FAMILY ACTIVITIES — clearly secondary */}
-      <section className="bg-white py-12 border-t-4 border-gray-100">
+      {/* FAMILY ACTIVITIES */}
+      <section className="bg-gradient-to-b from-blue-50 to-white py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-1">
-            <div>
-              <h2 className="text-xl font-black text-gray-700">Family Activities</h2>
-              <p className="text-gray-400 text-sm mt-0.5 font-semibold">Parents join in, great for the whole family together</p>
+          {/* Section header callout — mirrors the drop-off banner */}
+          <div className="bg-blue-500 text-white rounded-2xl px-5 py-4 mb-6 flex flex-col sm:flex-row sm:items-center gap-3">
+            <div className="flex-1">
+              <div className="font-black text-lg leading-tight">Family Activities</div>
+              <div className="text-blue-100 text-sm font-semibold mt-0.5">
+                Parents join in. Built for kids, enjoyed together. Great for all ages as a family.
+              </div>
             </div>
-            <Link href="/activities?audience=family" className="text-blue-500 font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all whitespace-nowrap">
-              View all <ChevronRight size={16} />
+            <Link
+              href="/activities?audience=family"
+              className="shrink-0 bg-white text-blue-600 font-black text-sm px-5 py-2 rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap"
+            >
+              See all family spots <ChevronRight size={14} className="inline" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {familyActivities.map((activity) => (
               <ActivityCard key={activity.slug} activity={activity} audienceContext="family" />
             ))}
