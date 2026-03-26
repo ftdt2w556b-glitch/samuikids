@@ -33,5 +33,8 @@
   "openingHours": "Daily 8am – 6pm. Story time: Sat & Sun 10am.",
   "featured": false,
   "popularity": 7,
-  "audience": "kids"
+  "audience": "kids",
+  "dropOff": true,
+  "memberDiscount": true,
+  "sessionType": "group"
 }

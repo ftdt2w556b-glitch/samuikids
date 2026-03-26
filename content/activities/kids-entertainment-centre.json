@@ -32,5 +32,9 @@
   "openingHours": "Daily 9am – 7pm",
   "featured": false,
   "popularity": 8,
-  "audience": "kids"
+  "audience": "kids",
+  "dropOff": true,
+  "memberDiscount": true,
+  "sessionType": "group",
+  "allDayOption": true
 }

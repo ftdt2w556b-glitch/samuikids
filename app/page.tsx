@@ -32,10 +32,10 @@ export default function HomePage() {
           <div className="absolute top-20 -right-10 w-52 h-52 rounded-full bg-blue-300/40 blur-2xl" />
         </div>
 
-        <div className="relative max-w-xl mx-auto px-5 pt-2 pb-8 text-center">
+        <div className="relative max-w-xl mx-auto px-5 pt-0 pb-6 text-center">
 
           {/* Logo */}
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto drop-shadow-2xl">
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto drop-shadow-2xl">
             <Image src="/images/samuikidslogo.png" alt="Samui Kids Fun Guide" fill className="object-contain" priority />
           </div>
 

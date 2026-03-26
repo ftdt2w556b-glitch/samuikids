@@ -34,5 +34,8 @@
   "openingHours": "Daily 10am – 8pm",
   "featured": true,
   "popularity": 9,
-  "audience": "kids"
+  "audience": "kids",
+  "dropOff": true,
+  "memberDiscount": true,
+  "sessionType": "group"
 }

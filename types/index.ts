@@ -31,7 +31,12 @@ export interface Activity {
   website?: string;
   phone?: string;
   featured: boolean;
-  verified?: boolean;
   popularity: number; // 1-10
   audience: Audience;
+  dropOff?: boolean;        // parents can leave kids with staff
+  memberDiscount?: boolean; // offers SamuiKids.com member discount
+  sessionType?: "private" | "group" | "both";
+  allDayOption?: boolean;   // has multi-hour or full-day option
+  ageMin?: number;          // minimum age in years
+  ageMax?: number;          // maximum age in years
 }

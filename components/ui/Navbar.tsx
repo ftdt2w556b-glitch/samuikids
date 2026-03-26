@@ -36,8 +36,8 @@ export default function Navbar() {
             />
           </div>
           <div className="leading-none">
-            <span className="block text-base font-black text-cyan-600">Samui Kids</span>
-            <span className="block text-[10px] font-bold text-orange-500 uppercase tracking-wide">Fun Guide</span>
+            <span className="block text-base font-black text-cyan-600">SamuiKids.com</span>
+            <span className="block text-[10px] font-bold text-orange-500 uppercase tracking-wide">Drop-off Guide</span>
           </div>
         </Link>
 
@@ -68,8 +68,7 @@ export default function Navbar() {
           <Link href="/activities" className="text-gray-700 hover:text-cyan-600 transition-colors">
             Activities
           </Link>
-          <Link href="/map" className="text-gray-700 hover:text-cyan-600 transition-colors flex items-center gap-1">
-            <MapPin size={14} />
+          <Link href="/map" className="text-gray-700 hover:text-cyan-600 transition-colors">
             Map
           </Link>
           <Link href="/about" className="text-gray-700 hover:text-cyan-600 transition-colors">

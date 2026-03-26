@@ -1,8 +1,8 @@
 {
   "slug": "ninja-gym",
   "title": "Rick Tew's NinjaGym",
-  "shortDesc": "Obstacle courses, ninja training, and martial arts for kids — the ultimate active adventure with drop-off available.",
-  "description": "Rick Tew's NinjaGym is Koh Samui's premier action sports facility offering obstacle courses, martial arts, and ninja warrior-style training for kids and families. With padded floors, foam pits, balance beams, and wall runs, kids can channel their inner ninja while building strength, coordination, and confidence. Supervised sessions make it a perfect drop-off activity for parents who want a well-deserved break. Suitable for ages 4 and up.",
+  "shortDesc": "Obstacle courses, ninja training and martial arts for ages 3-10. Group sessions with staff supervision. Drop-off approved.",
+  "description": "Rick Tew's NinjaGym is Koh Samui's premier kids action sports facility offering guided obstacle courses, martial arts and ninja warrior-style training. With padded floors, foam pits, balance beams and wall runs, children ages 3-10 channel their inner ninja while building strength, coordination and confidence. Group sessions are run by qualified instructors so parents can enjoy a well-earned break. SamuiKids.com members receive an exclusive discount.",
   "category": "adventure-sports",
   "tags": [
     "ninja",
@@ -14,9 +14,8 @@
     "drop-off"
   ],
   "ageGroups": [
-    "kids",
-    "tweens",
-    "all-ages"
+    "toddlers",
+    "kids"
   ],
   "priceRange": "mid",
   "priceNote": "From 300 THB per session",
@@ -35,5 +34,10 @@
   "featured": true,
   "popularity": 10,
   "audience": "kids",
-  "verified": true
+  "ageMin": 3,
+  "ageMax": 10,
+  "dropOff": true,
+  "memberDiscount": true,
+  "sessionType": "group",
+  "allDayOption": false
 }

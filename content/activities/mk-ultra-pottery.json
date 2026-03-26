@@ -33,5 +33,7 @@
   "featured": false,
   "popularity": 6,
   "audience": "kids",
-  "verified": true
+  "dropOff": true,
+  "memberDiscount": true,
+  "sessionType": "both"
 }

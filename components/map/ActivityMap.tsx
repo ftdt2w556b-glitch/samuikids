@@ -31,10 +31,10 @@ export default function ActivityMap({ activities }: Props) {
       const map = L.map(mapRef.current!).setView([9.53, 100.06], 11);
       mapInstanceRef.current = map;
 
-      // OpenTopoMap — green terrain, illustrated style
-      L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
-        attribution: '© <a href="https://opentopomap.org/">OpenTopoMap</a> contributors, © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-        maxZoom: 17,
+      // CartoDB Voyager — graphic, colorful, illustrated style
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        maxZoom: 18,
       }).addTo(map);
 
       const CATEGORY_COLOR: Record<string, string> = {
