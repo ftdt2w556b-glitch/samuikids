@@ -78,7 +78,7 @@ export default function ActivitiesClient({
     }
 
     return result;
-  }, [activities, search, selectedCategories, selectedAges, selectedPrices, sortBy]);
+  }, [activities, search, selectedCategories, selectedAges, selectedPrices, sortBy, audience]);
 
   const toggleCategory = (cat: Category) =>
     setSelectedCategories((prev) =>
