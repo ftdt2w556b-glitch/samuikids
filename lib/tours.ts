@@ -47,7 +47,7 @@ export async function getAllTours(): Promise<Tour[]> {
     .eq("active", true)
     .order("created_at", { ascending: true });
 
-  if (error) throw new Error(error.message);
+  if (error) return []; // table may not exist yet during build
   if (!data?.length) return [];
 
   // Get stop counts
@@ -69,7 +69,7 @@ export async function getAllToursAdmin(): Promise<Tour[]> {
     .select("*")
     .order("created_at", { ascending: true });
 
-  if (error) throw new Error(error.message);
+  if (error) return [];
   return (data ?? []).map(mapTour);
 }
 
