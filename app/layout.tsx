@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: "The drop-off guide for supervised kids activities on Koh Samui, Thailand. Every listing is built for children, fully supervised, and offers member discounts.",
     images: [
       {
-        url: "https://samuikids.com/images/samuikidsog.png",
+        url: "https://samuikids.com/images/samuikidsog.jpg",
         width: 1200,
         height: 630,
         alt: "SamuiKids.com — Drop-off Supervised Kids Activities on Koh Samui",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SamuiKids.com — Kids Activities on Koh Samui",
     description: "The drop-off guide for supervised kids activities on Koh Samui, Thailand. Every listing is built for children, fully supervised, and offers member discounts.",
-    images: ["https://samuikids.com/images/samuikidsog.png"],
+    images: ["https://samuikids.com/images/samuikidsog.jpg"],
   },
 };
 
