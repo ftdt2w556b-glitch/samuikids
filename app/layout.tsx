@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import InstallPrompt from "@/components/InstallPrompt";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -46,6 +47,26 @@ export const metadata: Metadata = {
     description: "The drop-off guide for supervised kids activities on Koh Samui, Thailand. Every listing is built for children, fully supervised, and offers member discounts.",
     images: ["https://samuikids.com/images/samuikidsog.jpg"],
   },
+  manifest: "/manifest.json",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
+    shortcut: "/favicon.png",
+    apple: "/icons/icon-192.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "SamuiKids",
+  },
+  formatDetection: { telephone: false },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#06b6d4",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -55,6 +76,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <InstallPrompt />
       </body>
     </html>
   );
