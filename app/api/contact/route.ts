@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: "SamuiKids.com <hello@samuikids.com>",
-      to: "hello@samuikids.com",
+      to: process.env.CONTACT_EMAIL ?? "hello@samuikids.com",
       replyTo: email,
       subject: subject
         ? `[SamuiKids] ${subject}`
