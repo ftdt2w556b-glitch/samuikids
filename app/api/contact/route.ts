@@ -1,21 +1,12 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const transporter = nodemailer.createTransport({
-  host: "mail.samuikids.com",
-  port: 465,
-  secure: true, // SSL
-  auth: {
-    user: "hello@samuikids.com",
-    pass: process.env.SMTP_PASSWORD,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
     const { name, email, subject, message, bizDetails } = await req.json();
 
-    // Basic validation
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Name, email, and message are required." },
@@ -30,8 +21,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    await transporter.sendMail({
-      from: '"Samui Kids Contact" <hello@samuikids.com>',
+    await resend.emails.send({
+      from: "SamuiKids.com <hello@samuikids.com>",
       to: "hello@samuikids.com",
       replyTo: email,
       subject: subject
@@ -76,6 +67,7 @@ export async function POST(req: NextRequest) {
             <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Session Lengths</td><td style="padding:6px 12px;color:#111827;">${bizDetails.sessionLengths || "Not specified"}</td></tr>
             <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Food / Drinks</td><td style="padding:6px 12px;color:#111827;">${[bizDetails.hasFood && "Food", bizDetails.hasDrinks && "Drinks"].filter(Boolean).join(", ") || "None"}</td></tr>
             <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Drop-off</td><td style="padding:6px 12px;color:#111827;">${bizDetails.dropOff ? "Yes" : "No"}</td></tr>
+            <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Member Offer</td><td style="padding:6px 12px;color:#111827;">${bizDetails.memberOffer || "Not specified"}</td></tr>
             <tr><td style="padding:6px 12px;font-weight:700;color:#374151;">Legally Registered</td><td style="padding:6px 12px;color:${bizDetails.legallyRegistered ? "#059669" : "#dc2626"};font-weight:700;">${bizDetails.legallyRegistered ? "YES - confirmed" : "NOT confirmed"}</td></tr>
           </table>
           ` : ""}
